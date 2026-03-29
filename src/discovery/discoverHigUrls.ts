@@ -2,6 +2,14 @@ import { chromium, type Browser, type Page } from "playwright";
 
 import { classifyAppleUrl, normalizeHigUrl } from "./urlRules.js";
 
+export interface DiscoveryProgress {
+  visitedCount: number;
+  queuedCount: number;
+  discoveredCount: number;
+  currentUrl: string;
+  discoveredUrls: string[];
+}
+
 async function waitForHydratedContent(page: Page): Promise<void> {
   await page.waitForSelector("main");
   await page
@@ -50,8 +58,17 @@ export async function discoverHigUrlsFromPage(page: Page): Promise<string[]> {
 
 export async function discoverHigUrls(
   rootUrl: string,
-  browser?: Browser
+  browserOrOptions?: Browser | { browser?: Browser; onProgress?: (state: DiscoveryProgress) => Promise<void> | void },
+  maybeOptions?: { onProgress?: (state: DiscoveryProgress) => Promise<void> | void }
 ): Promise<string[]> {
+  const browser =
+    browserOrOptions && "newPage" in browserOrOptions
+      ? browserOrOptions
+      : browserOrOptions?.browser;
+  const onProgress =
+    browserOrOptions && "newPage" in browserOrOptions
+      ? maybeOptions?.onProgress
+      : browserOrOptions?.onProgress;
   const ownedBrowser = browser ?? (await chromium.launch());
   const page = await ownedBrowser.newPage();
   const queue = [normalizeHigUrl(rootUrl)];
@@ -78,6 +95,14 @@ export async function discoverHigUrls(
           queue.push(discoveredUrl);
         }
       }
+
+      await onProgress?.({
+        visitedCount: visited.size,
+        queuedCount: queue.length,
+        discoveredCount: visited.size + queue.length,
+        currentUrl,
+        discoveredUrls: Array.from(new Set([...visited, ...queue])).sort()
+      });
     }
 
     return Array.from(visited).sort();

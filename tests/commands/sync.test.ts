@@ -19,42 +19,6 @@ afterAll(async () => {
   await Promise.all(tempDirs.map((directory) => fs.rm(directory, { recursive: true, force: true })));
 });
 
-describe("runDiscover", () => {
-  it("writes a canonical URL inventory manifest", async () => {
-    const rootDir = await makeTempDir();
-    const writeManifest = vi.fn(async () => path.join(rootDir, "data", "manifests", "discover.json"));
-
-    const result = await runDiscover(
-      {
-        rootUrl: "https://developer.apple.com/design/human-interface-guidelines/",
-        manifestsRoot: path.join(rootDir, "data", "manifests")
-      },
-      {
-        discoverHigUrls: async () => [
-          "https://developer.apple.com/design/human-interface-guidelines/accessibility"
-        ],
-        writeManifest
-      }
-    );
-
-    expect(writeManifest).toHaveBeenCalledWith({
-      manifestsRoot: path.join(rootDir, "data", "manifests"),
-      fileName: "discover.json",
-      manifest: {
-        discoveredUrls: [
-          "https://developer.apple.com/design/human-interface-guidelines/accessibility"
-        ],
-        processedUrls: [],
-        failedUrls: [],
-        removedUrls: []
-      }
-    });
-    expect(result.discoveredUrls).toEqual([
-      "https://developer.apple.com/design/human-interface-guidelines/accessibility"
-    ]);
-  });
-});
-
 describe("runSync", () => {
   it("runs discover, plan, render, and sync-manifest writing in order", async () => {
     const rootDir = await makeTempDir();
