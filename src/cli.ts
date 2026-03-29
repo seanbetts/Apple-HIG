@@ -1,4 +1,6 @@
 import { runDiscover } from "./commands/discover.js";
+import { runPlan } from "./commands/plan.js";
+import { runRender } from "./commands/render.js";
 import { runSync } from "./commands/sync.js";
 import { verifyGeneratedContent } from "./commands/verify.js";
 import { resolveRepoPath } from "./config.js";
@@ -13,6 +15,19 @@ export const commands: Record<string, CommandHandler> = {
       manifestsRoot: resolveRepoPath("data", "manifests")
     });
     logger.info("Discovery manifest written.");
+  },
+  plan: async () => {
+    await runPlan({
+      manifestsRoot: resolveRepoPath("data", "manifests")
+    });
+    logger.info("Plan manifest written.");
+  },
+  render: async () => {
+    await runRender({
+      contentRoot: resolveRepoPath("content"),
+      manifestsRoot: resolveRepoPath("data", "manifests")
+    });
+    logger.info("Render manifest written.");
   },
   sync: async () => {
     await runSync({

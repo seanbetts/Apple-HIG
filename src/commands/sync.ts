@@ -1,11 +1,10 @@
-import { chromium } from "playwright";
+import fs from "node:fs/promises";
+import path from "node:path";
 
-import { discoverHigUrls } from "../discovery/discoverHigUrls.js";
-import { extractPage } from "../extraction/extractPage.js";
+import { runDiscover } from "./discover.js";
+import { runPlan } from "./plan.js";
+import { runRender } from "./render.js";
 import { writeManifest } from "../io/writeManifest.js";
-import { writePage } from "../io/writePage.js";
-import { normalizePage } from "../normalization/normalizePage.js";
-import { renderMarkdown } from "../render/renderMarkdown.js";
 import type { Manifest } from "../types/manifest.js";
 
 interface SyncOptions {
@@ -15,36 +14,39 @@ interface SyncOptions {
 }
 
 interface SyncDependencies {
-  discoverHigUrls: typeof discoverHigUrls;
-  extractPageFromUrl: (url: string) => Promise<Awaited<ReturnType<typeof extractPage>>>;
-  normalizePage: typeof normalizePage;
-  renderMarkdown: typeof renderMarkdown;
-  writePage: typeof writePage;
+  preparePreviousDiscoverManifest: (manifestsRoot: string) => Promise<void>;
+  runDiscover: typeof runDiscover;
+  runPlan: typeof runPlan;
+  runRender: typeof runRender;
   writeManifest: typeof writeManifest;
 }
 
-async function extractPageFromUrl(url: string) {
-  const browser = await chromium.launch();
-  const page = await browser.newPage();
+async function preparePreviousDiscoverManifest(manifestsRoot: string): Promise<void> {
+  const currentManifestPath = path.join(manifestsRoot, "discover.json");
+  const previousManifestPath = path.join(manifestsRoot, "discover.previous.json");
 
   try {
-    await page.goto(url, {
-      waitUntil: "domcontentloaded"
+    await fs.mkdir(manifestsRoot, {
+      recursive: true
     });
+    await fs.copyFile(currentManifestPath, previousManifestPath);
+  } catch (error) {
+    if ((error as NodeJS.ErrnoException).code === "ENOENT") {
+      await fs.rm(previousManifestPath, {
+        force: true
+      });
+      return;
+    }
 
-    return await extractPage(page, url);
-  } finally {
-    await page.close();
-    await browser.close();
+    throw error;
   }
 }
 
 const defaultDependencies: SyncDependencies = {
-  discoverHigUrls,
-  extractPageFromUrl,
-  normalizePage,
-  renderMarkdown,
-  writePage,
+  preparePreviousDiscoverManifest,
+  runDiscover,
+  runPlan,
+  runRender,
   writeManifest
 };
 
@@ -52,34 +54,18 @@ export async function runSync(
   options: SyncOptions,
   dependencies: SyncDependencies = defaultDependencies
 ): Promise<Manifest> {
-  const discoveredUrls = await dependencies.discoverHigUrls(options.rootUrl);
-  const processedUrls: string[] = [];
-  const failedUrls: string[] = [];
-
-  for (const url of discoveredUrls) {
-    try {
-      const extractedPage = await dependencies.extractPageFromUrl(url);
-      const normalizedPage = dependencies.normalizePage(extractedPage);
-      const markdown = dependencies.renderMarkdown(normalizedPage);
-
-      await dependencies.writePage({
-        contentRoot: options.contentRoot,
-        canonicalPath: normalizedPage.canonicalPath,
-        markdown
-      });
-
-      processedUrls.push(url);
-    } catch {
-      failedUrls.push(url);
-    }
-  }
-
-  const manifest: Manifest = {
-    discoveredUrls,
-    processedUrls,
-    failedUrls,
-    removedUrls: []
-  };
+  await dependencies.preparePreviousDiscoverManifest(options.manifestsRoot);
+  await dependencies.runDiscover({
+    rootUrl: options.rootUrl,
+    manifestsRoot: options.manifestsRoot
+  });
+  await dependencies.runPlan({
+    manifestsRoot: options.manifestsRoot
+  });
+  const manifest = await dependencies.runRender({
+    contentRoot: options.contentRoot,
+    manifestsRoot: options.manifestsRoot
+  });
 
   await dependencies.writeManifest({
     manifestsRoot: options.manifestsRoot,

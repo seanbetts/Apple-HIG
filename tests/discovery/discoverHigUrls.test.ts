@@ -1,9 +1,13 @@
 import fs from "node:fs/promises";
+import http from "node:http";
 
 import { chromium } from "playwright";
 import { afterAll, beforeAll, describe, expect, it } from "vitest";
 
-import { discoverHigUrlsFromPage } from "../../src/discovery/discoverHigUrls.js";
+import {
+  discoverHigUrls,
+  discoverHigUrlsFromPage
+} from "../../src/discovery/discoverHigUrls.js";
 
 const fixturePath = new URL("../fixtures/pages/hig-home.html", import.meta.url);
 
@@ -39,5 +43,131 @@ describe("discoverHigUrlsFromPage", () => {
     ]);
 
     await page.close();
+  });
+
+  it("waits for hydrated main-content links before collecting discovery URLs", async () => {
+    const page = await browser.newPage();
+
+    await page.setContent(
+      `<!doctype html>
+      <html>
+        <body>
+          <main>
+            <a href="https://developer.apple.com/design/human-interface-guidelines/">Root</a>
+          </main>
+          <script>
+            setTimeout(() => {
+              const link = document.createElement("a");
+              link.href = "https://developer.apple.com/design/human-interface-guidelines/foundations";
+              link.textContent = "Foundations";
+              document.querySelector("main").appendChild(link);
+            }, 50);
+          </script>
+        </body>
+      </html>`,
+      { waitUntil: "domcontentloaded" }
+    );
+
+    const urls = await discoverHigUrlsFromPage(page);
+
+    expect(urls).toContain(
+      "https://developer.apple.com/design/human-interface-guidelines/foundations"
+    );
+
+    await page.close();
+  });
+
+  it("recursively discovers nested HIG pages from linked HIG pages", async () => {
+    const server = http.createServer((request, response) => {
+      response.setHeader("Content-Type", "text/html; charset=utf-8");
+
+      if (request.url === "/design/human-interface-guidelines") {
+        response.end(`<!doctype html>
+          <html>
+            <body>
+              <main>
+                <a href="/design/human-interface-guidelines/foundations">Foundations</a>
+                <a href="/design/human-interface-guidelines/components">Components</a>
+              </main>
+            </body>
+          </html>`);
+        return;
+      }
+
+      if (request.url === "/design/human-interface-guidelines/foundations") {
+        response.end(`<!doctype html>
+          <html>
+            <body>
+              <main>
+                <article>
+                  <a href="/design/human-interface-guidelines/foundations/accessibility">Accessibility</a>
+                </article>
+              </main>
+            </body>
+          </html>`);
+        return;
+      }
+
+      if (request.url === "/design/human-interface-guidelines/components") {
+        response.end(`<!doctype html>
+          <html>
+            <body>
+              <main>
+                <article>
+                  <a href="/design/human-interface-guidelines/components/buttons">Buttons</a>
+                </article>
+              </main>
+            </body>
+          </html>`);
+        return;
+      }
+
+      response.end(`<!doctype html>
+        <html>
+          <body>
+            <main>
+              <article>
+                <p>Leaf page</p>
+              </article>
+            </main>
+          </body>
+        </html>`);
+    });
+
+    await new Promise<void>((resolve) => {
+      server.listen(0, "127.0.0.1", () => resolve());
+    });
+
+    const address = server.address();
+
+    if (!address || typeof address === "string") {
+      throw new Error("Failed to start discovery test server");
+    }
+
+    try {
+      const urls = await discoverHigUrls(
+        `http://127.0.0.1:${address.port}/design/human-interface-guidelines`,
+        browser
+      );
+
+      expect(urls).toEqual([
+        `http://127.0.0.1:${address.port}/design/human-interface-guidelines`,
+        `http://127.0.0.1:${address.port}/design/human-interface-guidelines/components`,
+        `http://127.0.0.1:${address.port}/design/human-interface-guidelines/components/buttons`,
+        `http://127.0.0.1:${address.port}/design/human-interface-guidelines/foundations`,
+        `http://127.0.0.1:${address.port}/design/human-interface-guidelines/foundations/accessibility`
+      ]);
+    } finally {
+      await new Promise<void>((resolve, reject) => {
+        server.close((error) => {
+          if (error) {
+            reject(error);
+            return;
+          }
+
+          resolve();
+        });
+      });
+    }
   });
 });

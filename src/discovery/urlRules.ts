@@ -17,11 +17,6 @@ export function normalizeHigUrl(input: string): string {
 
 export function classifyAppleUrl(input: string): AppleUrlClassification {
   const url = new URL(input);
-
-  if (url.hostname !== APPLE_HOST) {
-    return "outOfScope";
-  }
-
   const normalizedPath = url.pathname.replace(/\/+$/, "");
 
   if (
@@ -29,6 +24,10 @@ export function classifyAppleUrl(input: string): AppleUrlClassification {
     normalizedPath.startsWith(`${HIG_PREFIX}/`)
   ) {
     return "hig";
+  }
+
+  if (url.hostname !== APPLE_HOST) {
+    return "outOfScope";
   }
 
   return "externalApple";

@@ -36,6 +36,14 @@ describe("classifyAppleUrl", () => {
     ).toBe("hig");
   });
 
+  it("accepts local HIG path variants for crawler testing and local mirrors", () => {
+    expect(
+      classifyAppleUrl(
+        "http://127.0.0.1:4173/design/human-interface-guidelines/components/buttons"
+      )
+    ).toBe("hig");
+  });
+
   it("keeps non-HIG Apple docs out of crawl targets", () => {
     expect(
       classifyAppleUrl("https://developer.apple.com/documentation/uikit")

@@ -4,6 +4,12 @@ import { commands } from "../../src/cli.js";
 
 describe("commands", () => {
   it("registers the top-level CLI commands", () => {
-    expect(Object.keys(commands).sort()).toEqual(["discover", "sync", "verify"]);
+    expect(Object.keys(commands).sort()).toEqual([
+      "discover",
+      "plan",
+      "render",
+      "sync",
+      "verify"
+    ]);
   });
 });

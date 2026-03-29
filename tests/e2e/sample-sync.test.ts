@@ -4,7 +4,11 @@ import path from "node:path";
 
 import { afterAll, describe, expect, it } from "vitest";
 
+import type { Manifest } from "../../src/types/manifest.js";
+import type { PlanManifest } from "../../src/types/plan.js";
+import { runRender } from "../../src/commands/render.js";
 import { runSync } from "../../src/commands/sync.js";
+import type { ExtractedPage } from "../../src/extraction/extractPage.js";
 import { writeManifest } from "../../src/io/writeManifest.js";
 import { writePage } from "../../src/io/writePage.js";
 import { normalizePage } from "../../src/normalization/normalizePage.js";
@@ -28,7 +32,7 @@ describe("sample HIG sync", () => {
     const contentRoot = path.join(rootDir, "content");
     const manifestsRoot = path.join(rootDir, "data", "manifests");
 
-    const pages = new Map([
+    const pages = new Map<string, ExtractedPage>([
       [
         "https://developer.apple.com/design/human-interface-guidelines/accessibility",
         {
@@ -79,11 +83,41 @@ describe("sample HIG sync", () => {
     ]);
 
     const dependencies = {
-      discoverHigUrls: async () => Array.from(pages.keys()),
-      extractPageFromUrl: async (url: string) => pages.get(url)!,
-      normalizePage,
-      renderMarkdown,
-      writePage,
+      preparePreviousDiscoverManifest: async () => undefined,
+      runDiscover: async () =>
+        ({
+          discoveredUrls: Array.from(pages.keys()),
+          processedUrls: [],
+          failedUrls: [],
+          removedUrls: []
+        }) satisfies Manifest,
+      runPlan: async () =>
+        ({
+          discoveredUrls: Array.from(pages.keys()),
+          newUrls: Array.from(pages.keys()),
+          changedUrls: [],
+          unchangedUrls: [],
+          removedUrls: [],
+          renderUrls: Array.from(pages.keys())
+        }) satisfies PlanManifest,
+      runRender: async (options: { contentRoot: string; manifestsRoot: string }) =>
+        runRender(options, {
+          readPlanManifest: async () =>
+            ({
+              discoveredUrls: Array.from(pages.keys()),
+              newUrls: Array.from(pages.keys()),
+              changedUrls: [],
+              unchangedUrls: [],
+              removedUrls: [],
+              renderUrls: Array.from(pages.keys())
+            }) satisfies PlanManifest,
+          extractPageFromUrl: async (url: string) => pages.get(url)!,
+          normalizePage,
+          renderMarkdown,
+          writePage,
+          deletePage: async () => undefined,
+          writeManifest
+        }),
       writeManifest
     };
 

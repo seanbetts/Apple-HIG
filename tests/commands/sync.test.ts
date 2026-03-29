@@ -56,7 +56,7 @@ describe("runDiscover", () => {
 });
 
 describe("runSync", () => {
-  it("runs discovery, extraction, normalization, rendering, and output writing in order", async () => {
+  it("runs discover, plan, render, and sync-manifest writing in order", async () => {
     const rootDir = await makeTempDir();
     const callOrder: string[] = [];
 
@@ -67,56 +67,63 @@ describe("runSync", () => {
         manifestsRoot: path.join(rootDir, "data", "manifests")
       },
       {
-        discoverHigUrls: async () => {
+        preparePreviousDiscoverManifest: async () => {
+          callOrder.push("prepare");
+        },
+        runDiscover: async () => {
           callOrder.push("discover");
-          return [
-            "https://developer.apple.com/design/human-interface-guidelines/accessibility"
-          ];
-        },
-        extractPageFromUrl: async (url) => {
-          callOrder.push(`extract:${url}`);
           return {
-            sourceUrl: url,
-            title: "Accessibility",
-            breadcrumbs: ["Human Interface Guidelines", "Foundations", "Accessibility"],
-            appleChanges: [{ raw: "Updated February 14, 2026" }],
-            internalLinks: [],
-            externalLinks: [],
-            contentBlocks: []
+            discoveredUrls: [
+              "https://developer.apple.com/design/human-interface-guidelines/accessibility"
+            ],
+            processedUrls: [],
+            failedUrls: [],
+            removedUrls: []
           };
         },
-        normalizePage: (rawPage) => {
-          callOrder.push("normalize");
+        runPlan: async () => {
+          callOrder.push("plan");
           return {
-            ...rawPage,
-            canonicalPath: "/accessibility",
-            section: "Foundations",
-            internalLinks: [],
-            externalLinks: []
+            discoveredUrls: [
+              "https://developer.apple.com/design/human-interface-guidelines/accessibility"
+            ],
+            newUrls: [
+              "https://developer.apple.com/design/human-interface-guidelines/accessibility"
+            ],
+            changedUrls: [],
+            unchangedUrls: [],
+            removedUrls: [],
+            renderUrls: [
+              "https://developer.apple.com/design/human-interface-guidelines/accessibility"
+            ]
           };
         },
-        renderMarkdown: (page) => {
+        runRender: async () => {
           callOrder.push("render");
-          return `# ${page.title}\n`;
-        },
-        writePage: async () => {
-          callOrder.push("writePage");
-          return path.join(rootDir, "content", "accessibility", "index.md");
+          return {
+            discoveredUrls: [
+              "https://developer.apple.com/design/human-interface-guidelines/accessibility"
+            ],
+            processedUrls: [
+              "https://developer.apple.com/design/human-interface-guidelines/accessibility"
+            ],
+            failedUrls: [],
+            removedUrls: []
+          };
         },
         writeManifest: async () => {
-          callOrder.push("writeManifest");
+          callOrder.push("writeSyncManifest");
           return path.join(rootDir, "data", "manifests", "sync.json");
         }
       }
     );
 
     expect(callOrder).toEqual([
+      "prepare",
       "discover",
-      "extract:https://developer.apple.com/design/human-interface-guidelines/accessibility",
-      "normalize",
+      "plan",
       "render",
-      "writePage",
-      "writeManifest"
+      "writeSyncManifest"
     ]);
     expect(result.failedUrls).toEqual([]);
     expect(result.processedUrls).toEqual([
@@ -124,7 +131,7 @@ describe("runSync", () => {
     ]);
   });
 
-  it("records failed page extractions in the manifest", async () => {
+  it("returns failed URLs from the render phase", async () => {
     const rootDir = await makeTempDir();
 
     const result = await runSync(
@@ -134,15 +141,39 @@ describe("runSync", () => {
         manifestsRoot: path.join(rootDir, "data", "manifests")
       },
       {
-        discoverHigUrls: async () => [
-          "https://developer.apple.com/design/human-interface-guidelines/accessibility"
-        ],
-        extractPageFromUrl: async () => {
-          throw new Error("boom");
-        },
-        normalizePage: (rawPage) => rawPage,
-        renderMarkdown: () => "# unused\n",
-        writePage: async () => path.join(rootDir, "content", "unused", "index.md"),
+        preparePreviousDiscoverManifest: async () => undefined,
+        runDiscover: async () => ({
+          discoveredUrls: [
+            "https://developer.apple.com/design/human-interface-guidelines/accessibility"
+          ],
+          processedUrls: [],
+          failedUrls: [],
+          removedUrls: []
+        }),
+        runPlan: async () => ({
+          discoveredUrls: [
+            "https://developer.apple.com/design/human-interface-guidelines/accessibility"
+          ],
+          newUrls: [],
+          changedUrls: [
+            "https://developer.apple.com/design/human-interface-guidelines/accessibility"
+          ],
+          unchangedUrls: [],
+          removedUrls: [],
+          renderUrls: [
+            "https://developer.apple.com/design/human-interface-guidelines/accessibility"
+          ]
+        }),
+        runRender: async () => ({
+          discoveredUrls: [
+            "https://developer.apple.com/design/human-interface-guidelines/accessibility"
+          ],
+          processedUrls: [],
+          failedUrls: [
+            "https://developer.apple.com/design/human-interface-guidelines/accessibility"
+          ],
+          removedUrls: []
+        }),
         writeManifest: async () => path.join(rootDir, "data", "manifests", "sync.json")
       }
     );

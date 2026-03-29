@@ -36,7 +36,7 @@ describe("verifyGeneratedContent", () => {
     );
   });
 
-  it("reports broken internal relative links", async () => {
+  it("reports broken internal canonical links", async () => {
     const rootDir = await makeTempDir();
     const pagePath = path.join(rootDir, "content", "accessibility", "index.md");
 
@@ -53,7 +53,7 @@ apple_changes:
   - label: Updated
     raw: Updated February 14, 2026
 internal_links:
-  - ../components/buttons/
+  - /components/buttons
 external_links: []
 ---
 
@@ -68,7 +68,7 @@ external_links: []
 
     expect(result.ok).toBe(false);
     expect(result.errors).toContain(
-      `${pagePath}: broken internal link ../components/buttons/`
+      `${pagePath}: broken internal link /components/buttons`
     );
   });
 
@@ -91,7 +91,7 @@ apple_changes:
   - label: Updated
     raw: Updated February 14, 2026
 internal_links:
-  - ../components/buttons/
+  - /components/buttons
 external_links:
   - https://developer.apple.com/documentation/uikit
 ---

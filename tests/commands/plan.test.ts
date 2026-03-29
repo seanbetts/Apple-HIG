@@ -1,0 +1,84 @@
+import os from "node:os";
+import path from "node:path";
+
+import fs from "node:fs/promises";
+import { afterAll, describe, expect, it, vi } from "vitest";
+
+import { runPlan } from "../../src/commands/plan.js";
+
+const tempDirs: string[] = [];
+
+async function makeTempDir(): Promise<string> {
+  const directory = await fs.mkdtemp(path.join(os.tmpdir(), "apple-hig-plan-"));
+  tempDirs.push(directory);
+  return directory;
+}
+
+afterAll(async () => {
+  await Promise.all(tempDirs.map((directory) => fs.rm(directory, { recursive: true, force: true })));
+});
+
+describe("runPlan", () => {
+  it("classifies new, changed, and removed URLs and writes a plan manifest", async () => {
+    const rootDir = await makeTempDir();
+    const writePlanManifest = vi.fn(async () =>
+      path.join(rootDir, "data", "manifests", "plan.json")
+    );
+
+    const result = await runPlan(
+      {
+        manifestsRoot: path.join(rootDir, "data", "manifests")
+      },
+      {
+        readCurrentDiscoverManifest: async () => ({
+          discoveredUrls: [
+            "https://developer.apple.com/design/human-interface-guidelines/accessibility",
+            "https://developer.apple.com/design/human-interface-guidelines/components/buttons"
+          ],
+          processedUrls: [],
+          failedUrls: [],
+          removedUrls: []
+        }),
+        readPreviousDiscoverManifest: async () => ({
+          discoveredUrls: [
+            "https://developer.apple.com/design/human-interface-guidelines/accessibility",
+            "https://developer.apple.com/design/human-interface-guidelines/toolbars"
+          ],
+          processedUrls: [],
+          failedUrls: [],
+          removedUrls: []
+        }),
+        writePlanManifest
+      }
+    );
+
+    expect(writePlanManifest).toHaveBeenCalledWith({
+      manifestsRoot: path.join(rootDir, "data", "manifests"),
+      fileName: "plan.json",
+      manifest: {
+        discoveredUrls: [
+          "https://developer.apple.com/design/human-interface-guidelines/accessibility",
+          "https://developer.apple.com/design/human-interface-guidelines/components/buttons"
+        ],
+        newUrls: [
+          "https://developer.apple.com/design/human-interface-guidelines/components/buttons"
+        ],
+        changedUrls: [
+          "https://developer.apple.com/design/human-interface-guidelines/accessibility"
+        ],
+        unchangedUrls: [],
+        removedUrls: [
+          "https://developer.apple.com/design/human-interface-guidelines/toolbars"
+        ],
+        renderUrls: [
+          "https://developer.apple.com/design/human-interface-guidelines/accessibility",
+          "https://developer.apple.com/design/human-interface-guidelines/components/buttons"
+        ]
+      }
+    });
+    expect(result.renderUrls).toEqual([
+      "https://developer.apple.com/design/human-interface-guidelines/accessibility",
+      "https://developer.apple.com/design/human-interface-guidelines/components/buttons"
+    ]);
+  });
+});

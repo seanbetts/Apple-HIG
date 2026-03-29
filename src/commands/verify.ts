@@ -45,14 +45,16 @@ function hasRequiredFrontmatter(data: Record<string, unknown>): boolean {
 }
 
 async function checkInternalLinks(
+  contentRoot: string,
   pagePath: string,
   internalLinks: string[]
 ): Promise<string[]> {
   const errors: string[] = [];
 
   for (const link of internalLinks) {
-    const [relativePath] = link.split("#", 1);
-    const targetPath = path.resolve(pagePath, "..", relativePath, "index.md");
+    const [canonicalPath] = link.split("#", 1);
+    const cleanedPath = canonicalPath.replace(/^\/+|\/+$/g, "");
+    const targetPath = path.join(contentRoot, cleanedPath, "index.md");
 
     try {
       await fs.access(targetPath);
@@ -85,6 +87,7 @@ export async function verifyGeneratedContent(options: {
     }
 
     const linkErrors = await checkInternalLinks(
+      options.contentRoot,
       file,
       parsed.data.internal_links as string[]
     );
