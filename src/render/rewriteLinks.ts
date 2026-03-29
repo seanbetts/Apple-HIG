@@ -1,5 +1,7 @@
 import path from "node:path";
 
+import { classifyAppleUrl } from "../discovery/urlRules.js";
+
 function canonicalDir(canonicalPath: string): string {
   const trimmed = canonicalPath.replace(/^\/+|\/+$/g, "");
   return trimmed || ".";
@@ -9,11 +11,24 @@ export function rewriteInternalHigLink(
   href: string,
   currentPagePath: string
 ): string {
-  if (!href.startsWith("/")) {
-    return href;
+  let targetHref = href;
+
+  if (href.startsWith("http://") || href.startsWith("https://")) {
+    if (classifyAppleUrl(href) !== "hig") {
+      return href;
+    }
+
+    const url = new URL(href);
+    const canonicalPath =
+      url.pathname.replace(/^\/design\/human-interface-guidelines/, "") || "/";
+    targetHref = `${canonicalPath}${url.hash}`;
   }
 
-  const [targetPath, fragment] = href.split("#", 2);
+  if (!targetHref.startsWith("/")) {
+    return targetHref;
+  }
+
+  const [targetPath, fragment] = targetHref.split("#", 2);
   const relativePath = path.posix.relative(
     canonicalDir(currentPagePath),
     canonicalDir(targetPath)

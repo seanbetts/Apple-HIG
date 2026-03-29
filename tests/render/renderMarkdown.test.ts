@@ -74,7 +74,7 @@ Accessible experiences help everyone use your app.
 
 ## Related resources
 
-- [Buttons](https://developer.apple.com/design/human-interface-guidelines/components/buttons)
+- [Buttons](../components/buttons/)
 - [UIKit](https://developer.apple.com/documentation/uikit)
 `);
   });

@@ -1,8 +1,9 @@
 import type { ContentBlock, NormalizedPage } from "../types/content.js";
 
 import { renderFrontmatter } from "./renderFrontmatter.js";
+import { rewriteInternalHigLink } from "./rewriteLinks.js";
 
-function renderBlock(block: ContentBlock): string {
+function renderBlock(block: ContentBlock, currentPagePath: string): string {
   switch (block.type) {
     case "heading":
       return `${"#".repeat(block.level)} ${block.text}`;
@@ -29,7 +30,10 @@ function renderBlock(block: ContentBlock): string {
       return [
         "## Related resources",
         "",
-        ...block.links.map((link) => `- [${link.title}](${link.href})`)
+        ...block.links.map(
+          (link) =>
+            `- [${link.title}](${rewriteInternalHigLink(link.href, currentPagePath)})`
+        )
       ].join("\n");
     case "callout":
       return [
@@ -49,7 +53,10 @@ export function renderMarkdown(page: NormalizedPage): string {
   const parts = [
     renderFrontmatter(page),
     "",
-    ...page.contentBlocks.flatMap((block) => [renderBlock(block), ""])
+    ...page.contentBlocks.flatMap((block) => [
+      renderBlock(block, page.canonicalPath),
+      ""
+    ])
   ];
 
   return `${parts.join("\n").trimEnd()}\n`;
