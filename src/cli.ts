@@ -5,6 +5,7 @@ import { runSync } from "./commands/sync.js";
 import { verifyGeneratedContent } from "./commands/verify.js";
 import { resolveRepoPath } from "./config.js";
 import { logger } from "./logging.js";
+import { syncMintlifyPreview } from "./mintlify/syncMintlifyPreview.js";
 
 export type CommandHandler = () => Promise<void>;
 
@@ -15,6 +16,10 @@ export const commands: Record<string, CommandHandler> = {
       manifestsRoot: resolveRepoPath("data", "manifests")
     });
     logger.info("Discovery manifest written.");
+  },
+  mintlify: async () => {
+    await syncMintlifyPreview(resolveRepoPath("content"));
+    logger.info("Mintlify preview config written.");
   },
   plan: async () => {
     await runPlan({

@@ -39,8 +39,7 @@ describe("runDiscover", () => {
       breadcrumbs: ["Human Interface Guidelines", "Accessibility"],
       appleChanges: [{ raw: "Updated February 14, 2026" }],
       internalLinks: ["/components/buttons"],
-      discoveryHash: "hash-accessibility",
-      lastSeenAt: "2026-03-29T20:00:00.000Z"
+      discoveryHash: "hash-accessibility"
     } satisfies DiscoveryPageRecord;
     const buttonsPage = {
       url: "https://developer.apple.com/design/human-interface-guidelines/components/buttons",
@@ -49,8 +48,7 @@ describe("runDiscover", () => {
       breadcrumbs: ["Human Interface Guidelines", "Components", "Buttons"],
       appleChanges: [],
       internalLinks: [],
-      discoveryHash: "hash-buttons",
-      lastSeenAt: "2026-03-29T20:00:01.000Z"
+      discoveryHash: "hash-buttons"
     } satisfies DiscoveryPageRecord;
 
     const result = await runDiscover(

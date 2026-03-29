@@ -60,6 +60,18 @@ Render only the pages selected by the current plan:
 npm run render
 ```
 
+Regenerate the local Mintlify preview config:
+
+```bash
+npm run mintlify
+```
+
+Preview the mirrored docs locally with Mintlify:
+
+```bash
+npm run docs:preview
+```
+
 Verify generated output:
 
 ```bash
@@ -75,6 +87,7 @@ npm test
 ## Output Layout
 
 - `content/`: generated Markdown mirror of HIG pages
+- `content/docs.json`: generated Mintlify config for local preview
 - `data/manifests/`: discovery, planning, and render manifests
 - `src/`: CLI, discovery, extraction, normalization, rendering, and IO code
 - `tests/`: unit, fixture, and end-to-end tests
@@ -87,8 +100,10 @@ That workflow:
 
 - runs on a weekly schedule and via manual dispatch
 - installs dependencies and the Playwright Chromium browser
-- runs `npm run sync`
-- runs `npm run verify`
+- runs `npm run discover` and `npm run plan`
+- skips `render` and `verify` when `plan.json` contains no pages to render or remove
+- runs `npm run render` only when content work is needed
+- runs `npm run verify` after render
 - commits and pushes changes only when generated content or manifests changed
 
 ## Current Status

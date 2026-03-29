@@ -41,6 +41,9 @@ describe("runRender", () => {
     const writeManifest = vi.fn(async (options: { fileName: string }) =>
       path.join(rootDir, "data", "manifests", options.fileName)
     );
+    const syncMintlifyPreview = vi.fn(async () =>
+      path.join(rootDir, "content", "docs.json")
+    );
     const logger = {
       info: vi.fn(),
       warn: vi.fn(),
@@ -86,6 +89,7 @@ describe("runRender", () => {
           path.join(rootDir, "content", "accessibility", "index.md"),
         deletePage: async () => undefined,
         writeManifest,
+        syncMintlifyPreview,
         logger
       }
     );
@@ -147,6 +151,9 @@ describe("runRender", () => {
     expect(logger.info).toHaveBeenNthCalledWith(
       2,
       "Render progress: processed 1/2, failed 1, current https://developer.apple.com/design/human-interface-guidelines/toolbars"
+    );
+    expect(syncMintlifyPreview).toHaveBeenCalledWith(
+      path.join(rootDir, "content")
     );
     expect(result).toEqual({
       discoveredUrls: [
@@ -224,6 +231,10 @@ describe("runRender", () => {
         deletePage: async (options) => {
           callOrder.push(`delete:${options.canonicalPath}`);
         },
+        syncMintlifyPreview: async () => {
+          callOrder.push("syncMintlifyPreview");
+          return path.join(rootDir, "content", "docs.json");
+        },
         writeManifest: async () => {
           callOrder.push("writeManifest");
           return path.join(rootDir, "data", "manifests", "render.json");
@@ -238,6 +249,7 @@ describe("runRender", () => {
       "writePage",
       "writeManifest",
       "delete:/toolbars",
+      "syncMintlifyPreview",
       "writeManifest"
     ]);
     expect(result).toEqual({
@@ -287,6 +299,8 @@ describe("runRender", () => {
         renderMarkdown: () => "# unused\n",
         writePage: async () => path.join(rootDir, "content", "unused", "index.md"),
         deletePage: async () => undefined,
+        syncMintlifyPreview: async () =>
+          path.join(rootDir, "content", "docs.json"),
         writeManifest: async () => path.join(rootDir, "data", "manifests", "render.json")
       }
     );

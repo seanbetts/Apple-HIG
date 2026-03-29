@@ -6,6 +6,7 @@ import { chromium } from "playwright";
 import { extractPage } from "../extraction/extractPage.js";
 import { writeManifest } from "../io/writeManifest.js";
 import { logger, type Logger } from "../logging.js";
+import { syncMintlifyPreview } from "../mintlify/syncMintlifyPreview.js";
 import { writePage } from "../io/writePage.js";
 import { normalizePage } from "../normalization/normalizePage.js";
 import { renderMarkdown } from "../render/renderMarkdown.js";
@@ -27,6 +28,7 @@ interface RenderDependencies {
     contentRoot: string;
     canonicalPath: string;
   }) => Promise<void>;
+  syncMintlifyPreview?: (contentRoot: string) => Promise<string>;
   writeManifest: typeof writeManifest;
   logger?: Logger;
 }
@@ -85,6 +87,7 @@ const defaultDependencies: RenderDependencies = {
   renderMarkdown,
   writePage,
   deletePage,
+  syncMintlifyPreview,
   writeManifest,
   logger
 };
@@ -173,6 +176,8 @@ export async function runRender(
       canonicalPath: canonicalPathFromUrl(removedUrl)
     });
   }
+
+  await resolvedDependencies.syncMintlifyPreview?.(options.contentRoot);
 
   const manifest: Manifest = {
     discoveredUrls: planManifest.discoveredUrls,

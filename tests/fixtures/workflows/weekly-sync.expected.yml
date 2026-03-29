@@ -20,9 +20,28 @@ jobs:
 
       - run: npx playwright install chromium
 
-      - run: npm run sync
+      - run: npm run discover
+
+      - run: npm run plan
+
+      - name: Determine whether render work is needed
+        id: plan
+        run: |
+          node - <<'EOF'
+          const fs = require('fs');
+          const plan = JSON.parse(fs.readFileSync('data/manifests/plan.json', 'utf8'));
+          const shouldRender = plan.renderUrls.length > 0 || plan.removedUrls.length > 0;
+
+          fs.appendFileSync(process.env.GITHUB_OUTPUT, `should_render=${shouldRender}\n`);
+          fs.appendFileSync(process.env.GITHUB_OUTPUT, `render_count=${plan.renderUrls.length}\n`);
+          fs.appendFileSync(process.env.GITHUB_OUTPUT, `removed_count=${plan.removedUrls.length}\n`);
+          EOF
+
+      - run: npm run render
+        if: steps.plan.outputs.should_render == 'true'
 
       - run: npm run verify
+        if: steps.plan.outputs.should_render == 'true'
 
       - name: Commit changes if needed
         run: |

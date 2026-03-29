@@ -93,8 +93,7 @@ async function extractInternalLinks(page: Page, sourceUrl: string): Promise<stri
 
 export async function extractDiscoveryPage(
   page: Page,
-  sourceUrl: string,
-  lastSeenAt: string = new Date().toISOString()
+  sourceUrl: string
 ): Promise<DiscoveryPageRecord> {
   const canonicalPath = canonicalPathFromUrl(sourceUrl);
   const titleLocator = page.locator("main .documentation-hero h1, main h1").first();
@@ -151,7 +150,6 @@ export async function extractDiscoveryPage(
         breadcrumbs.length > 0 ? breadcrumbs : fallbackBreadcrumbs(sourceUrl, title),
       appleChanges,
       internalLinks
-    }),
-    lastSeenAt
+    })
   };
 }

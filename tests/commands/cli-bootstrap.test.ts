@@ -6,6 +6,7 @@ describe("commands", () => {
   it("registers the top-level CLI commands", () => {
     expect(Object.keys(commands).sort()).toEqual([
       "discover",
+      "mintlify",
       "plan",
       "render",
       "sync",

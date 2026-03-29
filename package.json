@@ -8,9 +8,11 @@
     "test": "vitest run",
     "sync": "tsx src/cli.ts sync",
     "discover": "tsx src/cli.ts discover",
+    "mintlify": "tsx src/cli.ts mintlify",
     "plan": "tsx src/cli.ts plan",
     "render": "tsx src/cli.ts render",
-    "verify": "tsx src/cli.ts verify"
+    "verify": "tsx src/cli.ts verify",
+    "docs:preview": "npm run mintlify && cd content && npx mint dev --no-open"
   },
   "devDependencies": {
     "@types/node": "^24.5.2",

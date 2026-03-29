@@ -14,8 +14,7 @@ export const discoveryPageRecordSchema = z.object({
   breadcrumbs: z.array(z.string()),
   appleChanges: z.array(discoveryAppleChangeSchema),
   internalLinks: z.array(z.string().regex(/^\/.*$/)),
-  discoveryHash: z.string().min(1),
-  lastSeenAt: z.string().datetime()
+  discoveryHash: z.string().min(1)
 });
 
 export const discoverManifestSchema = manifestSchema.extend({

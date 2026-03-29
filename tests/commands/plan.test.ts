@@ -49,8 +49,7 @@ describe("runPlan", () => {
               breadcrumbs: ["Human Interface Guidelines", "Accessibility"],
               appleChanges: [{ raw: "Updated February 14, 2026" }],
               internalLinks: [],
-              discoveryHash: "same-hash",
-              lastSeenAt: "2026-03-29T20:00:00.000Z"
+              discoveryHash: "same-hash"
             },
             "https://developer.apple.com/design/human-interface-guidelines/components/buttons": {
               url: "https://developer.apple.com/design/human-interface-guidelines/components/buttons",
@@ -59,8 +58,7 @@ describe("runPlan", () => {
               breadcrumbs: ["Human Interface Guidelines", "Components", "Buttons"],
               appleChanges: [],
               internalLinks: [],
-              discoveryHash: "new-hash",
-              lastSeenAt: "2026-03-29T20:00:00.000Z"
+              discoveryHash: "new-hash"
             },
             "https://developer.apple.com/design/human-interface-guidelines/patterns": {
               url: "https://developer.apple.com/design/human-interface-guidelines/patterns",
@@ -69,8 +67,7 @@ describe("runPlan", () => {
               breadcrumbs: ["Human Interface Guidelines", "Patterns"],
               appleChanges: [],
               internalLinks: [],
-              discoveryHash: "changed-hash-next",
-              lastSeenAt: "2026-03-29T20:00:00.000Z"
+              discoveryHash: "changed-hash-next"
             }
           }
         }) satisfies DiscoverManifest,
@@ -92,8 +89,7 @@ describe("runPlan", () => {
               breadcrumbs: ["Human Interface Guidelines", "Accessibility"],
               appleChanges: [{ raw: "Updated February 14, 2026" }],
               internalLinks: [],
-              discoveryHash: "same-hash",
-              lastSeenAt: "2026-03-22T20:00:00.000Z"
+              discoveryHash: "same-hash"
             },
             "https://developer.apple.com/design/human-interface-guidelines/patterns": {
               url: "https://developer.apple.com/design/human-interface-guidelines/patterns",
@@ -102,8 +98,7 @@ describe("runPlan", () => {
               breadcrumbs: ["Human Interface Guidelines", "Patterns"],
               appleChanges: [],
               internalLinks: [],
-              discoveryHash: "changed-hash-prev",
-              lastSeenAt: "2026-03-22T20:00:00.000Z"
+              discoveryHash: "changed-hash-prev"
             },
             "https://developer.apple.com/design/human-interface-guidelines/toolbars": {
               url: "https://developer.apple.com/design/human-interface-guidelines/toolbars",
@@ -112,8 +107,7 @@ describe("runPlan", () => {
               breadcrumbs: ["Human Interface Guidelines", "Components", "Toolbars"],
               appleChanges: [],
               internalLinks: [],
-              discoveryHash: "removed-hash",
-              lastSeenAt: "2026-03-22T20:00:00.000Z"
+              discoveryHash: "removed-hash"
             }
           }
         }) satisfies DiscoverManifest,

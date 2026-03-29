@@ -209,8 +209,7 @@
         "/the-menu-bar",
         "/toolbars"
       ],
-      "discoveryHash": "701a21230bb234a8a5fae0713d496a4312484c9f7e736a306c7b303942eb86ba",
-      "lastSeenAt": "2026-03-29T20:15:23.743Z"
+      "discoveryHash": "701a21230bb234a8a5fae0713d496a4312484c9f7e736a306c7b303942eb86ba"
     },
     "https://developer.apple.com/design/human-interface-guidelines/accessibility": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/accessibility",
@@ -236,8 +235,7 @@
         "/typography",
         "/voiceover"
       ],
-      "discoveryHash": "ec29e591bcf1df0b5e1c6ef3e231eb3a2cc7a357bd09440a4dcbe5e77c4281c2",
-      "lastSeenAt": "2026-03-29T20:15:25.158Z"
+      "discoveryHash": "ec29e591bcf1df0b5e1c6ef3e231eb3a2cc7a357bd09440a4dcbe5e77c4281c2"
     },
     "https://developer.apple.com/design/human-interface-guidelines/action-button": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/action-button",
@@ -259,8 +257,7 @@
         "/live-activities",
         "/workouts"
       ],
-      "discoveryHash": "3e3b97510723d2311666f171d99910ee8d258015aa44c32990cb55cfaabffe52",
-      "lastSeenAt": "2026-03-29T20:16:13.214Z"
+      "discoveryHash": "3e3b97510723d2311666f171d99910ee8d258015aa44c32990cb55cfaabffe52"
     },
     "https://developer.apple.com/design/human-interface-guidelines/action-sheets": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/action-sheets",
@@ -277,8 +274,7 @@
         "/modality",
         "/sheets"
       ],
-      "discoveryHash": "480c7dcea3856728f29da0c484a4a00f414934e443ade17aad23429b82967272",
-      "lastSeenAt": "2026-03-29T20:17:25.005Z"
+      "discoveryHash": "480c7dcea3856728f29da0c484a4a00f414934e443ade17aad23429b82967272"
     },
     "https://developer.apple.com/design/human-interface-guidelines/activity-rings": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/activity-rings",
@@ -293,8 +289,7 @@
       "internalLinks": [
         "/workouts"
       ],
-      "discoveryHash": "e4b571a2ff5ab75c255e8839901e8c224619fc216041d8ff699f83be1eab2832",
-      "lastSeenAt": "2026-03-29T20:17:31.067Z"
+      "discoveryHash": "e4b571a2ff5ab75c255e8839901e8c224619fc216041d8ff699f83be1eab2832"
     },
     "https://developer.apple.com/design/human-interface-guidelines/activity-views": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/activity-views",
@@ -312,8 +307,7 @@
         "/sf-symbols",
         "/sheets"
       ],
-      "discoveryHash": "482b0ac927a53d72e55d33578bb61177c81dff5ff40adde0eec61e6794065d53",
-      "lastSeenAt": "2026-03-29T20:17:21.489Z"
+      "discoveryHash": "482b0ac927a53d72e55d33578bb61177c81dff5ff40adde0eec61e6794065d53"
     },
     "https://developer.apple.com/design/human-interface-guidelines/airplay": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/airplay",
@@ -326,8 +320,7 @@
       ],
       "appleChanges": [],
       "internalLinks": [],
-      "discoveryHash": "c0743f97b645991944ee589a6e971ac7398bc7f484b0dc81b5a72f50e9fcf7f5",
-      "lastSeenAt": "2026-03-29T20:16:45.074Z"
+      "discoveryHash": "c0743f97b645991944ee589a6e971ac7398bc7f484b0dc81b5a72f50e9fcf7f5"
     },
     "https://developer.apple.com/design/human-interface-guidelines/alerts": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/alerts",
@@ -351,8 +344,7 @@
         "/spatial-layout",
         "/toggles"
       ],
-      "discoveryHash": "9fd67b0ce87a149f1b9a7df1bf04e5b19679db3a49e9196675e16075e620aa82",
-      "lastSeenAt": "2026-03-29T20:17:25.609Z"
+      "discoveryHash": "9fd67b0ce87a149f1b9a7df1bf04e5b19679db3a49e9196675e16075e620aa82"
     },
     "https://developer.apple.com/design/human-interface-guidelines/always-on": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/always-on",
@@ -374,8 +366,7 @@
         "/notifications",
         "/widgets"
       ],
-      "discoveryHash": "c9890c750bc4b1656ef693896924999ae7a273e0bd834b5df294e651024654d9",
-      "lastSeenAt": "2026-03-29T20:16:46.170Z"
+      "discoveryHash": "c9890c750bc4b1656ef693896924999ae7a273e0bd834b5df294e651024654d9"
     },
     "https://developer.apple.com/design/human-interface-guidelines/app-clips": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/app-clips",
@@ -396,8 +387,7 @@
         "/nfc",
         "/sign-in-with-apple"
       ],
-      "discoveryHash": "792e725bbf072a5f45ad0f974e4237387dabd886d9f46f96d69f69fa0bee6d41",
-      "lastSeenAt": "2026-03-29T20:16:46.741Z"
+      "discoveryHash": "792e725bbf072a5f45ad0f974e4237387dabd886d9f46f96d69f69fa0bee6d41"
     },
     "https://developer.apple.com/design/human-interface-guidelines/app-icons": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/app-icons",
@@ -418,8 +408,7 @@
         "/icons",
         "/images"
       ],
-      "discoveryHash": "637edd48f323138613c14fbe2d8e05a7619765a599156c866e6c0d2c0950951f",
-      "lastSeenAt": "2026-03-29T20:15:26.173Z"
+      "discoveryHash": "637edd48f323138613c14fbe2d8e05a7619765a599156c866e6c0d2c0950951f"
     },
     "https://developer.apple.com/design/human-interface-guidelines/app-shortcuts": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/app-shortcuts",
@@ -442,8 +431,7 @@
         "/sf-symbols",
         "/siri"
       ],
-      "discoveryHash": "bd477951155a43975733f6ce4a3c7ba930c9c48b8d114d79af6ba14a0f5c6ca1",
-      "lastSeenAt": "2026-03-29T20:17:10.774Z"
+      "discoveryHash": "bd477951155a43975733f6ce4a3c7ba930c9c48b8d114d79af6ba14a0f5c6ca1"
     },
     "https://developer.apple.com/design/human-interface-guidelines/apple-pay": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/apple-pay",
@@ -462,8 +450,7 @@
       "internalLinks": [
         "/in-app-purchase"
       ],
-      "discoveryHash": "64856e0a1c0c4f6d68017c07ec83a28cc940b5fb65fc58fe1c98effba0aa8b27",
-      "lastSeenAt": "2026-03-29T20:16:47.459Z"
+      "discoveryHash": "64856e0a1c0c4f6d68017c07ec83a28cc940b5fb65fc58fe1c98effba0aa8b27"
     },
     "https://developer.apple.com/design/human-interface-guidelines/apple-pencil-and-scribble": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/apple-pencil-and-scribble",
@@ -484,8 +471,7 @@
         "/entering-data",
         "/undo-and-redo"
       ],
-      "discoveryHash": "60965c9a296abcb2eadb593b8f5a5d1a2be4bcf05c8b96a7801d9abca263dd7f",
-      "lastSeenAt": "2026-03-29T20:16:14.016Z"
+      "discoveryHash": "60965c9a296abcb2eadb593b8f5a5d1a2be4bcf05c8b96a7801d9abca263dd7f"
     },
     "https://developer.apple.com/design/human-interface-guidelines/augmented-reality": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/augmented-reality",
@@ -504,8 +490,7 @@
         "/playing-haptics",
         "/privacy"
       ],
-      "discoveryHash": "f0a180400817de37fef5c594c65a1c3a87f13be0ee09d8e2674502fc2efc5bbe",
-      "lastSeenAt": "2026-03-29T20:16:48.847Z"
+      "discoveryHash": "f0a180400817de37fef5c594c65a1c3a87f13be0ee09d8e2674502fc2efc5bbe"
     },
     "https://developer.apple.com/design/human-interface-guidelines/boxes": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/boxes",
@@ -521,8 +506,7 @@
         "/color",
         "/layout"
       ],
-      "discoveryHash": "3607066044da5a568808b8a9e4c09061ede37113e8b18d1775ab2c00cdf5b99f",
-      "lastSeenAt": "2026-03-29T20:17:16.248Z"
+      "discoveryHash": "3607066044da5a568808b8a9e4c09061ede37113e8b18d1775ab2c00cdf5b99f"
     },
     "https://developer.apple.com/design/human-interface-guidelines/branding": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/branding",
@@ -541,8 +525,7 @@
         "/onboarding",
         "/typography"
       ],
-      "discoveryHash": "745489c367b0c0033528f40da12817370a9c4acab4fa44787d8b6f9dbb7d4fec",
-      "lastSeenAt": "2026-03-29T20:15:55.645Z"
+      "discoveryHash": "745489c367b0c0033528f40da12817370a9c4acab4fa44787d8b6f9dbb7d4fec"
     },
     "https://developer.apple.com/design/human-interface-guidelines/buttons": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/buttons",
@@ -576,8 +559,7 @@
         "/toolbars",
         "/windows"
       ],
-      "discoveryHash": "470387ba6ac07d9c035fe8b7b484eb6de0f019a08c5c86d2582c685837c70724",
-      "lastSeenAt": "2026-03-29T20:16:11.747Z"
+      "discoveryHash": "470387ba6ac07d9c035fe8b7b484eb6de0f019a08c5c86d2582c685837c70724"
     },
     "https://developer.apple.com/design/human-interface-guidelines/camera-control": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/camera-control",
@@ -593,8 +575,7 @@
         "/controls",
         "/sf-symbols"
       ],
-      "discoveryHash": "59df7f5dcfb6b68dd9ac1a22062486ecd81112ffbf225e73c57254a0e8e97780",
-      "lastSeenAt": "2026-03-29T20:16:15.044Z"
+      "discoveryHash": "59df7f5dcfb6b68dd9ac1a22062486ecd81112ffbf225e73c57254a0e8e97780"
     },
     "https://developer.apple.com/design/human-interface-guidelines/carekit": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/carekit",
@@ -614,8 +595,7 @@
         "/researchkit",
         "/sf-symbols"
       ],
-      "discoveryHash": "019572a961762f09095bf95ccebac809b7dee586432e1127efae3b894dc53e82",
-      "lastSeenAt": "2026-03-29T20:16:49.988Z"
+      "discoveryHash": "019572a961762f09095bf95ccebac809b7dee586432e1127efae3b894dc53e82"
     },
     "https://developer.apple.com/design/human-interface-guidelines/carplay": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/carplay",
@@ -630,8 +610,7 @@
       "internalLinks": [
         "/color"
       ],
-      "discoveryHash": "23ebb47a223d91b92e34ce4527fc33b542ce225c56438666add55bcae2360000",
-      "lastSeenAt": "2026-03-29T20:16:51.354Z"
+      "discoveryHash": "23ebb47a223d91b92e34ce4527fc33b542ce225c56438666add55bcae2360000"
     },
     "https://developer.apple.com/design/human-interface-guidelines/charting-data": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/charting-data",
@@ -646,8 +625,7 @@
       "internalLinks": [
         "/charts"
       ],
-      "discoveryHash": "0f49aa2ced7b9bb1ce269ae3f7be64513ab212a6833da859fe9c4ea1915677ad",
-      "lastSeenAt": "2026-03-29T20:16:30.660Z"
+      "discoveryHash": "0f49aa2ced7b9bb1ce269ae3f7be64513ab212a6833da859fe9c4ea1915677ad"
     },
     "https://developer.apple.com/design/human-interface-guidelines/charts": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/charts",
@@ -664,8 +642,7 @@
         "/charting-data",
         "/color"
       ],
-      "discoveryHash": "04ed40b192a194cd0c8ff0a5e410a727a58be2b2411b34fd3ceee50b04585db7",
-      "lastSeenAt": "2026-03-29T20:17:13.205Z"
+      "discoveryHash": "04ed40b192a194cd0c8ff0a5e410a727a58be2b2411b34fd3ceee50b04585db7"
     },
     "https://developer.apple.com/design/human-interface-guidelines/collaboration-and-sharing": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/collaboration-and-sharing",
@@ -686,8 +663,7 @@
         "/immersive-experiences",
         "/shareplay"
       ],
-      "discoveryHash": "8d25c44fe1da3e97d270600f5c8c6f92ae51ffd74095b90d2de8365b9e8fdf4f",
-      "lastSeenAt": "2026-03-29T20:16:31.240Z"
+      "discoveryHash": "8d25c44fe1da3e97d270600f5c8c6f92ae51ffd74095b90d2de8365b9e8fdf4f"
     },
     "https://developer.apple.com/design/human-interface-guidelines/collections": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/collections",
@@ -704,8 +680,7 @@
         "/layout",
         "/lists-and-tables"
       ],
-      "discoveryHash": "a5dc3202006cadc13fb6ebc8ddc8a942a543c167446899a35472c56e2a239fb9",
-      "lastSeenAt": "2026-03-29T20:17:16.809Z"
+      "discoveryHash": "a5dc3202006cadc13fb6ebc8ddc8a942a543c167446899a35472c56e2a239fb9"
     },
     "https://developer.apple.com/design/human-interface-guidelines/color": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/color",
@@ -728,8 +703,7 @@
         "/materials",
         "/sidebars"
       ],
-      "discoveryHash": "9adf840c58b45f32995b6c2a73565f8c2ec43b29aec4e89e4200cc20a66ce77e",
-      "lastSeenAt": "2026-03-29T20:15:27.102Z"
+      "discoveryHash": "9adf840c58b45f32995b6c2a73565f8c2ec43b29aec4e89e4200cc20a66ce77e"
     },
     "https://developer.apple.com/design/human-interface-guidelines/color-wells": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/color-wells",
@@ -744,8 +718,7 @@
       "internalLinks": [
         "/color"
       ],
-      "discoveryHash": "c973ecbb109ada57cf30bb601be3ebd15d2e8e3c08f86c9644d4d98a4d64f874",
-      "lastSeenAt": "2026-03-29T20:17:27.411Z"
+      "discoveryHash": "c973ecbb109ada57cf30bb601be3ebd15d2e8e3c08f86c9644d4d98a4d64f874"
     },
     "https://developer.apple.com/design/human-interface-guidelines/column-views": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/column-views",
@@ -762,8 +735,7 @@
         "/outline-views",
         "/split-views"
       ],
-      "discoveryHash": "173ee8602842f9407e8abd80f0a464459becdd00533c701d2d9ffb710b3fa0e4",
-      "lastSeenAt": "2026-03-29T20:17:17.376Z"
+      "discoveryHash": "173ee8602842f9407e8abd80f0a464459becdd00533c701d2d9ffb710b3fa0e4"
     },
     "https://developer.apple.com/design/human-interface-guidelines/combo-boxes": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/combo-boxes",
@@ -780,8 +752,7 @@
         "/pull-down-buttons",
         "/text-fields"
       ],
-      "discoveryHash": "1aea7af24602102ee71f63d9195d7710d62354d4cd119186fda1816a736359cb",
-      "lastSeenAt": "2026-03-29T20:17:28.035Z"
+      "discoveryHash": "1aea7af24602102ee71f63d9195d7710d62354d4cd119186fda1816a736359cb"
     },
     "https://developer.apple.com/design/human-interface-guidelines/complications": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/complications",
@@ -802,8 +773,7 @@
         "/watch-faces",
         "/widgets"
       ],
-      "discoveryHash": "4319f3d135737edf99a0f46ec3ecf87eb10585392054adc719ee7b499b68e34e",
-      "lastSeenAt": "2026-03-29T20:15:48.444Z"
+      "discoveryHash": "4319f3d135737edf99a0f46ec3ecf87eb10585392054adc719ee7b499b68e34e"
     },
     "https://developer.apple.com/design/human-interface-guidelines/components": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/components",
@@ -825,8 +795,7 @@
         "/status",
         "/system-experiences"
       ],
-      "discoveryHash": "94fb885da4465fbe8e287c500aa48f5b65a52e1b5b72a4b06e1ba859642ace63",
-      "lastSeenAt": "2026-03-29T20:15:27.984Z"
+      "discoveryHash": "94fb885da4465fbe8e287c500aa48f5b65a52e1b5b72a4b06e1ba859642ace63"
     },
     "https://developer.apple.com/design/human-interface-guidelines/components/layout-and-organization/tab-views": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/components/layout-and-organization/tab-views",
@@ -845,8 +814,7 @@
         "/tab-bars",
         "/tab-views"
       ],
-      "discoveryHash": "edd3b6822f065909405fdea2ceba069f7f7c0892c9a8be59a2d5340b63931aab",
-      "lastSeenAt": "2026-03-29T20:17:38.315Z"
+      "discoveryHash": "edd3b6822f065909405fdea2ceba069f7f7c0892c9a8be59a2d5340b63931aab"
     },
     "https://developer.apple.com/design/human-interface-guidelines/components/presentation/page-controls": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/components/presentation/page-controls",
@@ -870,8 +838,7 @@
         "/scroll-views",
         "/sf-symbols"
       ],
-      "discoveryHash": "79d73a5012484e71149c567536a539547f7aefcd1e8f19befdb4467190b6f25c",
-      "lastSeenAt": "2026-03-29T20:17:37.102Z"
+      "discoveryHash": "79d73a5012484e71149c567536a539547f7aefcd1e8f19befdb4467190b6f25c"
     },
     "https://developer.apple.com/design/human-interface-guidelines/components/system-experiences/complications": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/components/system-experiences/complications",
@@ -894,8 +861,7 @@
         "/watch-faces",
         "/widgets"
       ],
-      "discoveryHash": "9b84b83ee394b11f596ba649a031be31f2af51a1235a224f4e269c06896559c6",
-      "lastSeenAt": "2026-03-29T20:17:36.198Z"
+      "discoveryHash": "9b84b83ee394b11f596ba649a031be31f2af51a1235a224f4e269c06896559c6"
     },
     "https://developer.apple.com/design/human-interface-guidelines/content": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/content",
@@ -912,8 +878,7 @@
         "/text-views",
         "/web-views"
       ],
-      "discoveryHash": "d6cf7435d41c4fcddc6f7db18bc358c7acf2ed47ff645574a375ab1f611b0fb2",
-      "lastSeenAt": "2026-03-29T20:15:49.630Z"
+      "discoveryHash": "d6cf7435d41c4fcddc6f7db18bc358c7acf2ed47ff645574a375ab1f611b0fb2"
     },
     "https://developer.apple.com/design/human-interface-guidelines/context-menus": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/context-menus",
@@ -936,8 +901,7 @@
         "/pop-up-buttons",
         "/pull-down-buttons"
       ],
-      "discoveryHash": "7b3c306165b4ce4bae38dbaf254239d0716df5d8825aeee12496413b54db01d8",
-      "lastSeenAt": "2026-03-29T20:17:22.128Z"
+      "discoveryHash": "7b3c306165b4ce4bae38dbaf254239d0716df5d8825aeee12496413b54db01d8"
     },
     "https://developer.apple.com/design/human-interface-guidelines/controls": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/controls",
@@ -956,8 +920,7 @@
         "/sf-symbols",
         "/widgets"
       ],
-      "discoveryHash": "d3726482e1505eae1a634714cc16acfa497a08f18108d4b519c1eb45f138d132",
-      "lastSeenAt": "2026-03-29T20:17:33.562Z"
+      "discoveryHash": "d3726482e1505eae1a634714cc16acfa497a08f18108d4b519c1eb45f138d132"
     },
     "https://developer.apple.com/design/human-interface-guidelines/dark-mode": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/dark-mode",
@@ -976,8 +939,7 @@
         "/sf-symbols",
         "/typography"
       ],
-      "discoveryHash": "f021a73a9c1e6727eb3b2697156759ece73839b1df7ea336676ec749e26850d6",
-      "lastSeenAt": "2026-03-29T20:15:41.998Z"
+      "discoveryHash": "f021a73a9c1e6727eb3b2697156759ece73839b1df7ea336676ec749e26850d6"
     },
     "https://developer.apple.com/design/human-interface-guidelines/designing-for-games": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/designing-for-games",
@@ -1024,8 +986,7 @@
         "/technologies",
         "/typography"
       ],
-      "discoveryHash": "03e70bd858a4e39e7d5d37feca8b6ee8a6741c269e29b8c373e9b984f4b24fff",
-      "lastSeenAt": "2026-03-29T20:16:01.385Z"
+      "discoveryHash": "03e70bd858a4e39e7d5d37feca8b6ee8a6741c269e29b8c373e9b984f4b24fff"
     },
     "https://developer.apple.com/design/human-interface-guidelines/designing-for-ios": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/designing-for-ios",
@@ -1049,8 +1010,7 @@
         "/virtual-keyboards",
         "/widgets"
       ],
-      "discoveryHash": "b70e594d72758050f55f1c195dd35ee327a24de127b29246ab8d4fefc0bdc731",
-      "lastSeenAt": "2026-03-29T20:16:05.853Z"
+      "discoveryHash": "b70e594d72758050f55f1c195dd35ee327a24de127b29246ab8d4fefc0bdc731"
     },
     "https://developer.apple.com/design/human-interface-guidelines/designing-for-ipados": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/designing-for-ipados",
@@ -1073,8 +1033,7 @@
         "/virtual-keyboards",
         "/widgets"
       ],
-      "discoveryHash": "b92f1763c9d6fcc93d36439f194002e132f6e524af114a5b458cc505423a0844",
-      "lastSeenAt": "2026-03-29T20:16:07.187Z"
+      "discoveryHash": "b92f1763c9d6fcc93d36439f194002e132f6e524af114a5b458cc505423a0844"
     },
     "https://developer.apple.com/design/human-interface-guidelines/designing-for-macos": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/designing-for-macos",
@@ -1096,8 +1055,7 @@
         "/siri",
         "/the-menu-bar"
       ],
-      "discoveryHash": "6d14aff02052b4e96f15d3a6785e3be1a3ab8adfe896b1721347f23e57b3ad15",
-      "lastSeenAt": "2026-03-29T20:16:08.401Z"
+      "discoveryHash": "6d14aff02052b4e96f15d3a6785e3be1a3ab8adfe896b1721347f23e57b3ad15"
     },
     "https://developer.apple.com/design/human-interface-guidelines/designing-for-tvos": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/designing-for-tvos",
@@ -1118,8 +1076,7 @@
         "/siri",
         "/top-shelf"
       ],
-      "discoveryHash": "dee0699069393cbca6230bdf8a92b257b529f4eba20a17dda457ff616df430a2",
-      "lastSeenAt": "2026-03-29T20:16:09.031Z"
+      "discoveryHash": "dee0699069393cbca6230bdf8a92b257b529f4eba20a17dda457ff616df430a2"
     },
     "https://developer.apple.com/design/human-interface-guidelines/designing-for-visionos": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/designing-for-visionos",
@@ -1147,8 +1104,7 @@
         "/spatial-layout",
         "/windows"
       ],
-      "discoveryHash": "dc8308c97052b446e8fb6520d27c9502886b22dd84c0e9bb9bb2d9b306c56839",
-      "lastSeenAt": "2026-03-29T20:16:10.057Z"
+      "discoveryHash": "dc8308c97052b446e8fb6520d27c9502886b22dd84c0e9bb9bb2d9b306c56839"
     },
     "https://developer.apple.com/design/human-interface-guidelines/designing-for-watchos": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/designing-for-watchos",
@@ -1172,8 +1128,7 @@
         "/siri",
         "/watch-faces"
       ],
-      "discoveryHash": "ea650ca796e4294ba932b06a895ea25c90805e62fdcfbb3146e3fd9f74a9314d",
-      "lastSeenAt": "2026-03-29T20:16:10.709Z"
+      "discoveryHash": "ea650ca796e4294ba932b06a895ea25c90805e62fdcfbb3146e3fd9f74a9314d"
     },
     "https://developer.apple.com/design/human-interface-guidelines/digit-entry-views": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/digit-entry-views",
@@ -1188,8 +1143,7 @@
       "internalLinks": [
         "/virtual-keyboards"
       ],
-      "discoveryHash": "b0039a44c313a3b8c17b4d692dbec08e808e2ba5dae91e567dc2fc3d60f19d16",
-      "lastSeenAt": "2026-03-29T20:17:28.604Z"
+      "discoveryHash": "b0039a44c313a3b8c17b4d692dbec08e808e2ba5dae91e567dc2fc3d60f19d16"
     },
     "https://developer.apple.com/design/human-interface-guidelines/digital-crown": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/digital-crown",
@@ -1210,8 +1164,7 @@
         "/feedback",
         "/immersive-experiences"
       ],
-      "discoveryHash": "57f33670d0cc397cdd848394f452193219442eac87d59d1cd8de747bd6e3ec88",
-      "lastSeenAt": "2026-03-29T20:16:15.961Z"
+      "discoveryHash": "57f33670d0cc397cdd848394f452193219442eac87d59d1cd8de747bd6e3ec88"
     },
     "https://developer.apple.com/design/human-interface-guidelines/disclosure-controls": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/disclosure-controls",
@@ -1228,8 +1181,7 @@
         "/lists-and-tables",
         "/outline-views"
       ],
-      "discoveryHash": "7a9d9f9b2bc1d460e569191bdff16acb7de05142ca20fd8d85e244bcd52fd943",
-      "lastSeenAt": "2026-03-29T20:16:21.036Z"
+      "discoveryHash": "7a9d9f9b2bc1d460e569191bdff16acb7de05142ca20fd8d85e244bcd52fd943"
     },
     "https://developer.apple.com/design/human-interface-guidelines/dock-menus": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/dock-menus",
@@ -1245,8 +1197,7 @@
         "/home-screen-quick-actions",
         "/menus"
       ],
-      "discoveryHash": "5792d73f371282bbcf35f9e34f4d2fee2c78adf15f736a1f5f83fef567283532",
-      "lastSeenAt": "2026-03-29T20:17:05.530Z"
+      "discoveryHash": "5792d73f371282bbcf35f9e34f4d2fee2c78adf15f736a1f5f83fef567283532"
     },
     "https://developer.apple.com/design/human-interface-guidelines/drag-and-drop": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/drag-and-drop",
@@ -1265,8 +1216,7 @@
       "internalLinks": [
         "/pointing-devices"
       ],
-      "discoveryHash": "d046a76ef91f2f8e210cb2dfc3b83b1164025280009e53635e142ac585d44d0b",
-      "lastSeenAt": "2026-03-29T20:16:32.346Z"
+      "discoveryHash": "d046a76ef91f2f8e210cb2dfc3b83b1164025280009e53635e142ac585d44d0b"
     },
     "https://developer.apple.com/design/human-interface-guidelines/edit-menus": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/edit-menus",
@@ -1290,8 +1240,7 @@
         "/the-menu-bar",
         "/undo-and-redo"
       ],
-      "discoveryHash": "23aab914343b15c522f987c4ecdde928f9d99a084e0261dcc33c011cb2e3f5a2",
-      "lastSeenAt": "2026-03-29T20:17:22.792Z"
+      "discoveryHash": "23aab914343b15c522f987c4ecdde928f9d99a084e0261dcc33c011cb2e3f5a2"
     },
     "https://developer.apple.com/design/human-interface-guidelines/entering-data": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/entering-data",
@@ -1315,8 +1264,7 @@
         "/text-fields",
         "/virtual-keyboards"
       ],
-      "discoveryHash": "fbc0b963cbeb79a8911be80ea3c717777a8c8ceac903198d1722874efea5373a",
-      "lastSeenAt": "2026-03-29T20:16:33.018Z"
+      "discoveryHash": "fbc0b963cbeb79a8911be80ea3c717777a8c8ceac903198d1722874efea5373a"
     },
     "https://developer.apple.com/design/human-interface-guidelines/eyes": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/eyes",
@@ -1336,8 +1284,7 @@
         "/layout",
         "/spatial-layout"
       ],
-      "discoveryHash": "a146709eba78746b3f74eaee8bd97d854551f7dd49e8d3ec937cf8a0f42177cc",
-      "lastSeenAt": "2026-03-29T20:16:16.496Z"
+      "discoveryHash": "a146709eba78746b3f74eaee8bd97d854551f7dd49e8d3ec937cf8a0f42177cc"
     },
     "https://developer.apple.com/design/human-interface-guidelines/feedback": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/feedback",
@@ -1355,8 +1302,7 @@
         "/playing-audio",
         "/playing-haptics"
       ],
-      "discoveryHash": "993f8151fe64eead56c730822025891c0eb16557a36a426a97756fba0d93ff72",
-      "lastSeenAt": "2026-03-29T20:16:33.611Z"
+      "discoveryHash": "993f8151fe64eead56c730822025891c0eb16557a36a426a97756fba0d93ff72"
     },
     "https://developer.apple.com/design/human-interface-guidelines/file-management": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/file-management",
@@ -1378,8 +1324,7 @@
         "/the-menu-bar",
         "/toolbars"
       ],
-      "discoveryHash": "6a9ce08643388c8f6f9afb2812756cceccc1c3e7c09090a0b050e1c3732255d3",
-      "lastSeenAt": "2026-03-29T20:16:34.313Z"
+      "discoveryHash": "6a9ce08643388c8f6f9afb2812756cceccc1c3e7c09090a0b050e1c3732255d3"
     },
     "https://developer.apple.com/design/human-interface-guidelines/focus-and-selection": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/focus-and-selection",
@@ -1400,8 +1345,7 @@
         "/images",
         "/keyboards"
       ],
-      "discoveryHash": "a29e5dc4bf59a1dd349c775c8bb115267d06c2825d3c1f2f94a1b8be1ef054f5",
-      "lastSeenAt": "2026-03-29T20:16:02.130Z"
+      "discoveryHash": "a29e5dc4bf59a1dd349c775c8bb115267d06c2825d3c1f2f94a1b8be1ef054f5"
     },
     "https://developer.apple.com/design/human-interface-guidelines/foundations": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/foundations",
@@ -1433,8 +1377,7 @@
         "/typography",
         "/writing"
       ],
-      "discoveryHash": "fd66bb842010485d123ec309ef1d817b96f1ea43136ec0b657768b143eb13531",
-      "lastSeenAt": "2026-03-29T20:15:29.410Z"
+      "discoveryHash": "fd66bb842010485d123ec309ef1d817b96f1ea43136ec0b657768b143eb13531"
     },
     "https://developer.apple.com/design/human-interface-guidelines/game-center": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/game-center",
@@ -1451,8 +1394,7 @@
         "/focus-and-selection",
         "/game-controls"
       ],
-      "discoveryHash": "2b10381f6896d2601f3a335cc400a1beceb1d9f10d638799a7305510015be265",
-      "lastSeenAt": "2026-03-29T20:15:30.873Z"
+      "discoveryHash": "2b10381f6896d2601f3a335cc400a1beceb1d9f10d638799a7305510015be265"
     },
     "https://developer.apple.com/design/human-interface-guidelines/game-controls": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/game-controls",
@@ -1476,8 +1418,7 @@
         "/playing-haptics",
         "/sf-symbols"
       ],
-      "discoveryHash": "c5f2e6f81aa78ac03cfec68ba40437eb1a6cd0c0792266c1c680b82d97c72131",
-      "lastSeenAt": "2026-03-29T20:16:02.953Z"
+      "discoveryHash": "c5f2e6f81aa78ac03cfec68ba40437eb1a6cd0c0792266c1c680b82d97c72131"
     },
     "https://developer.apple.com/design/human-interface-guidelines/gauges": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/gauges",
@@ -1493,8 +1434,7 @@
         "/rating-indicators",
         "/ratings-and-reviews"
       ],
-      "discoveryHash": "fc6e007546645db9a143c6fd88334e0de195d278d0062587c9086ef55e63a04d",
-      "lastSeenAt": "2026-03-29T20:17:31.707Z"
+      "discoveryHash": "fc6e007546645db9a143c6fd88334e0de195d278d0062587c9086ef55e63a04d"
     },
     "https://developer.apple.com/design/human-interface-guidelines/generative-ai": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/generative-ai",
@@ -1513,8 +1453,7 @@
         "/machine-learning",
         "/privacy"
       ],
-      "discoveryHash": "fe2f6ccfe800cbc8d40083a9555875c5652ab0e8bec138166a7701edcbd38bf1",
-      "lastSeenAt": "2026-03-29T20:15:31.807Z"
+      "discoveryHash": "fe2f6ccfe800cbc8d40083a9555875c5652ab0e8bec138166a7701edcbd38bf1"
     },
     "https://developer.apple.com/design/human-interface-guidelines/gestures": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/gestures",
@@ -1542,8 +1481,7 @@
         "/pointing-devices",
         "/remotes"
       ],
-      "discoveryHash": "71391e8bd600f066d8d3178130a291d31c2a81bdf9a5e04e7939cc77669de313",
-      "lastSeenAt": "2026-03-29T20:16:17.023Z"
+      "discoveryHash": "71391e8bd600f066d8d3178130a291d31c2a81bdf9a5e04e7939cc77669de313"
     },
     "https://developer.apple.com/design/human-interface-guidelines/getting-started": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/getting-started",
@@ -1564,8 +1502,7 @@
         "/designing-for-visionos",
         "/designing-for-watchos"
       ],
-      "discoveryHash": "df7470a3fe62ad2c9fe61823994237fcb7d271ad1795a33a6c7e3e44ed2778f4",
-      "lastSeenAt": "2026-03-29T20:15:32.875Z"
+      "discoveryHash": "df7470a3fe62ad2c9fe61823994237fcb7d271ad1795a33a6c7e3e44ed2778f4"
     },
     "https://developer.apple.com/design/human-interface-guidelines/going-full-screen": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/going-full-screen",
@@ -1589,8 +1526,7 @@
         "/toggles",
         "/windows"
       ],
-      "discoveryHash": "8d7da70c59545aab0908cff9c86894b8b94212e252af249cd37d1a9cf827c06d",
-      "lastSeenAt": "2026-03-29T20:16:34.904Z"
+      "discoveryHash": "8d7da70c59545aab0908cff9c86894b8b94212e252af249cd37d1a9cf827c06d"
     },
     "https://developer.apple.com/design/human-interface-guidelines/gyro-and-accelerometer": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/gyro-and-accelerometer",
@@ -1605,8 +1541,7 @@
       "internalLinks": [
         "/feedback"
       ],
-      "discoveryHash": "23f892ad2b1ec0a8fec22846134b00964e703d58b34a8aa1979c63036efaf7b1",
-      "lastSeenAt": "2026-03-29T20:16:18.160Z"
+      "discoveryHash": "23f892ad2b1ec0a8fec22846134b00964e703d58b34a8aa1979c63036efaf7b1"
     },
     "https://developer.apple.com/design/human-interface-guidelines/healthkit": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/healthkit",
@@ -1621,8 +1556,7 @@
       "internalLinks": [
         "/activity-rings"
       ],
-      "discoveryHash": "1f76b1898cc5a6db90274cf82eec3e5065b0ad8cca546d058bed357614c2d43e",
-      "lastSeenAt": "2026-03-29T20:16:52.698Z"
+      "discoveryHash": "1f76b1898cc5a6db90274cf82eec3e5065b0ad8cca546d058bed357614c2d43e"
     },
     "https://developer.apple.com/design/human-interface-guidelines/home-screen-quick-actions": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/home-screen-quick-actions",
@@ -1639,8 +1573,7 @@
         "/menus",
         "/sf-symbols"
       ],
-      "discoveryHash": "5d3da01baa54a4a801cf9feb70cf70a6fda10e3a6cc8e2df4d36a07b7692ccab",
-      "lastSeenAt": "2026-03-29T20:17:23.358Z"
+      "discoveryHash": "5d3da01baa54a4a801cf9feb70cf70a6fda10e3a6cc8e2df4d36a07b7692ccab"
     },
     "https://developer.apple.com/design/human-interface-guidelines/homekit": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/homekit",
@@ -1655,8 +1588,7 @@
       "internalLinks": [
         "/siri"
       ],
-      "discoveryHash": "6271d2b0cfb8757705506d119b8963fb90cc3a7f5031636f8e068c298ce43c69",
-      "lastSeenAt": "2026-03-29T20:16:54.079Z"
+      "discoveryHash": "6271d2b0cfb8757705506d119b8963fb90cc3a7f5031636f8e068c298ce43c69"
     },
     "https://developer.apple.com/design/human-interface-guidelines/icloud": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/icloud",
@@ -1669,8 +1601,7 @@
       ],
       "appleChanges": [],
       "internalLinks": [],
-      "discoveryHash": "95684d49f950d9c27d812cce448054a6c8bfba3e2dc6ee379b3776d29e3da760",
-      "lastSeenAt": "2026-03-29T20:16:54.783Z"
+      "discoveryHash": "95684d49f950d9c27d812cce448054a6c8bfba3e2dc6ee379b3776d29e3da760"
     },
     "https://developer.apple.com/design/human-interface-guidelines/icons": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/icons",
@@ -1696,8 +1627,7 @@
         "/toolbars",
         "/voiceover"
       ],
-      "discoveryHash": "49b5a20efc7bc1b5bba35f18de84822450b6be79e0b1c88141d6f58d5c225faf",
-      "lastSeenAt": "2026-03-29T20:15:34.267Z"
+      "discoveryHash": "49b5a20efc7bc1b5bba35f18de84822450b6be79e0b1c88141d6f58d5c225faf"
     },
     "https://developer.apple.com/design/human-interface-guidelines/id-verifier": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/id-verifier",
@@ -1712,8 +1642,7 @@
       "internalLinks": [
         "/wallet"
       ],
-      "discoveryHash": "e23d3c17813353b8c3e93b4a3fb8477481e950d5136554024fbdc00c6f579c37",
-      "lastSeenAt": "2026-03-29T20:16:55.850Z"
+      "discoveryHash": "e23d3c17813353b8c3e93b4a3fb8477481e950d5136554024fbdc00c6f579c37"
     },
     "https://developer.apple.com/design/human-interface-guidelines/image-views": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/image-views",
@@ -1737,8 +1666,7 @@
         "/sf-symbols",
         "/windows"
       ],
-      "discoveryHash": "ddc53311b3f351acdefa127805e1535658f6dab83be6afeca3642799e7446114",
-      "lastSeenAt": "2026-03-29T20:17:14.271Z"
+      "discoveryHash": "ddc53311b3f351acdefa127805e1535658f6dab83be6afeca3642799e7446114"
     },
     "https://developer.apple.com/design/human-interface-guidelines/image-wells": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/image-wells",
@@ -1754,8 +1682,7 @@
         "/image-views",
         "/the-menu-bar"
       ],
-      "discoveryHash": "f8d4ff6367d1036c4974c96516078c2df5c7d7141cee74f93c152ff97e252497",
-      "lastSeenAt": "2026-03-29T20:17:29.171Z"
+      "discoveryHash": "f8d4ff6367d1036c4974c96516078c2df5c7d7141cee74f93c152ff97e252497"
     },
     "https://developer.apple.com/design/human-interface-guidelines/images": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/images",
@@ -1777,8 +1704,7 @@
         "/layout",
         "/top-shelf"
       ],
-      "discoveryHash": "a7e431284121c39fd89f0de6cbc90224a0005328c1598bd86f31684e5aeb0089",
-      "lastSeenAt": "2026-03-29T20:15:47.763Z"
+      "discoveryHash": "a7e431284121c39fd89f0de6cbc90224a0005328c1598bd86f31684e5aeb0089"
     },
     "https://developer.apple.com/design/human-interface-guidelines/imessage-apps-and-stickers": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/imessage-apps-and-stickers",
@@ -1791,8 +1717,7 @@
       ],
       "appleChanges": [],
       "internalLinks": [],
-      "discoveryHash": "efb40fbed704704b4fddd317c75fc2c96da96f0a2318f0bc63846975a89df8f9",
-      "lastSeenAt": "2026-03-29T20:16:56.717Z"
+      "discoveryHash": "efb40fbed704704b4fddd317c75fc2c96da96f0a2318f0bc63846975a89df8f9"
     },
     "https://developer.apple.com/design/human-interface-guidelines/immersive-experiences": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/immersive-experiences",
@@ -1816,8 +1741,7 @@
         "/privacy",
         "/spatial-layout"
       ],
-      "discoveryHash": "08b944726535f3524adc56e1295e3bac7b4e7e14e3fd57a4c4e524e51cca67e0",
-      "lastSeenAt": "2026-03-29T20:15:56.307Z"
+      "discoveryHash": "08b944726535f3524adc56e1295e3bac7b4e7e14e3fd57a4c4e524e51cca67e0"
     },
     "https://developer.apple.com/design/human-interface-guidelines/in-app-purchase": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/in-app-purchase",
@@ -1837,8 +1761,7 @@
         "/apple-pay",
         "/onboarding"
       ],
-      "discoveryHash": "2e68cb170cfe50a872f9a784366430b9cd2a512da5116bec1de734e641e11d9f",
-      "lastSeenAt": "2026-03-29T20:16:57.453Z"
+      "discoveryHash": "2e68cb170cfe50a872f9a784366430b9cd2a512da5116bec1de734e641e11d9f"
     },
     "https://developer.apple.com/design/human-interface-guidelines/inclusion": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/inclusion",
@@ -1863,8 +1786,7 @@
         "/right-to-left",
         "/sf-symbols"
       ],
-      "discoveryHash": "e5e9b08bdfdb09530b0ae732aae5ec8258943af3cbb0a290af59e56c6c975560",
-      "lastSeenAt": "2026-03-29T20:15:42.661Z"
+      "discoveryHash": "e5e9b08bdfdb09530b0ae732aae5ec8258943af3cbb0a290af59e56c6c975560"
     },
     "https://developer.apple.com/design/human-interface-guidelines/inputs": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/inputs",
@@ -1891,8 +1813,7 @@
         "/pointing-devices",
         "/remotes"
       ],
-      "discoveryHash": "f5ff349482c827186e5671a0196417800b2dfed2a47f4e2c6892bc69978cfb6b",
-      "lastSeenAt": "2026-03-29T20:15:34.845Z"
+      "discoveryHash": "f5ff349482c827186e5671a0196417800b2dfed2a47f4e2c6892bc69978cfb6b"
     },
     "https://developer.apple.com/design/human-interface-guidelines/keyboards": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/keyboards",
@@ -1917,8 +1838,7 @@
         "/the-menu-bar",
         "/virtual-keyboards"
       ],
-      "discoveryHash": "2b9ac9cac034e021b2950a88f0ed2fa76090941e16a08b8846f99512719d8aaf",
-      "lastSeenAt": "2026-03-29T20:15:43.230Z"
+      "discoveryHash": "2b9ac9cac034e021b2950a88f0ed2fa76090941e16a08b8846f99512719d8aaf"
     },
     "https://developer.apple.com/design/human-interface-guidelines/labels": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/labels",
@@ -1943,8 +1863,7 @@
         "/text-fields",
         "/text-views"
       ],
-      "discoveryHash": "fcf58ccbaea371f8d87c551794bd3ca3f44fdaf9f3c797888705932eb9405354",
-      "lastSeenAt": "2026-03-29T20:17:18.082Z"
+      "discoveryHash": "fcf58ccbaea371f8d87c551794bd3ca3f44fdaf9f3c797888705932eb9405354"
     },
     "https://developer.apple.com/design/human-interface-guidelines/launching": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/launching",
@@ -1968,8 +1887,7 @@
         "/loading",
         "/onboarding"
       ],
-      "discoveryHash": "6d6688ea34e86ef4e55b72398a7e41ad4c53c0e3cce135d6f5a90edc2ba50344",
-      "lastSeenAt": "2026-03-29T20:16:35.549Z"
+      "discoveryHash": "6d6688ea34e86ef4e55b72398a7e41ad4c53c0e3cce135d6f5a90edc2ba50344"
     },
     "https://developer.apple.com/design/human-interface-guidelines/layout": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/layout",
@@ -2001,8 +1919,7 @@
         "/typography",
         "/windows"
       ],
-      "discoveryHash": "79ab58c3c366afa9284c2be038634763c44788ec8127f4f307f2b626aae63ed8",
-      "lastSeenAt": "2026-03-29T20:15:35.891Z"
+      "discoveryHash": "79ab58c3c366afa9284c2be038634763c44788ec8127f4f307f2b626aae63ed8"
     },
     "https://developer.apple.com/design/human-interface-guidelines/layout-and-organization": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/layout-and-organization",
@@ -2025,8 +1942,7 @@
         "/split-views",
         "/tab-views"
       ],
-      "discoveryHash": "bead796d7da5292c6ae87c3550d4ec9acfec4df6c29ea0c1e45de88c9467561b",
-      "lastSeenAt": "2026-03-29T20:15:50.030Z"
+      "discoveryHash": "bead796d7da5292c6ae87c3550d4ec9acfec4df6c29ea0c1e45de88c9467561b"
     },
     "https://developer.apple.com/design/human-interface-guidelines/lists-and-tables": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/lists-and-tables",
@@ -2048,8 +1964,7 @@
         "/outline-views",
         "/split-views"
       ],
-      "discoveryHash": "d2217fa03460e5e391c2f4923ceb0fced55b8b4704e7db95482694ca1104131f",
-      "lastSeenAt": "2026-03-29T20:17:18.624Z"
+      "discoveryHash": "d2217fa03460e5e391c2f4923ceb0fced55b8b4704e7db95482694ca1104131f"
     },
     "https://developer.apple.com/design/human-interface-guidelines/live-activities": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/live-activities",
@@ -2070,8 +1985,7 @@
         "/app-shortcuts",
         "/dark-mode"
       ],
-      "discoveryHash": "ec72a7a07ccf08dcfc32f2cd15cb64a79afd8b191e7f9bfe0b5a20618fa9fd7f",
-      "lastSeenAt": "2026-03-29T20:17:34.211Z"
+      "discoveryHash": "ec72a7a07ccf08dcfc32f2cd15cb64a79afd8b191e7f9bfe0b5a20618fa9fd7f"
     },
     "https://developer.apple.com/design/human-interface-guidelines/live-photos": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/live-photos",
@@ -2084,8 +1998,7 @@
       ],
       "appleChanges": [],
       "internalLinks": [],
-      "discoveryHash": "8b9444daa8c8066b70621a643353ef18878ed11a7d89212e74993480528f09af",
-      "lastSeenAt": "2026-03-29T20:16:58.189Z"
+      "discoveryHash": "8b9444daa8c8066b70621a643353ef18878ed11a7d89212e74993480528f09af"
     },
     "https://developer.apple.com/design/human-interface-guidelines/live-viewing-apps": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/live-viewing-apps",
@@ -2101,8 +2014,7 @@
         "/playing-video",
         "/remotes"
       ],
-      "discoveryHash": "8af09ecdbef1f1e858ed14f67ff7ab32d6210cb2c98f353b207efbe180c62b41",
-      "lastSeenAt": "2026-03-29T20:16:36.139Z"
+      "discoveryHash": "8af09ecdbef1f1e858ed14f67ff7ab32d6210cb2c98f353b207efbe180c62b41"
     },
     "https://developer.apple.com/design/human-interface-guidelines/loading": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/loading",
@@ -2118,8 +2030,7 @@
         "/launching",
         "/progress-indicators"
       ],
-      "discoveryHash": "a79443a705af2e357e2653e68b464b8ef16ebe651ad4c334ded2b393dd5af04f",
-      "lastSeenAt": "2026-03-29T20:16:03.721Z"
+      "discoveryHash": "a79443a705af2e357e2653e68b464b8ef16ebe651ad4c334ded2b393dd5af04f"
     },
     "https://developer.apple.com/design/human-interface-guidelines/lockups": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/lockups",
@@ -2136,8 +2047,7 @@
         "/image-views",
         "/layout"
       ],
-      "discoveryHash": "dc88a9cf08372ecce68d6068263bfec3859ccafc2eed1686127392e1e981276b",
-      "lastSeenAt": "2026-03-29T20:17:19.199Z"
+      "discoveryHash": "dc88a9cf08372ecce68d6068263bfec3859ccafc2eed1686127392e1e981276b"
     },
     "https://developer.apple.com/design/human-interface-guidelines/mac-catalyst": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/mac-catalyst",
@@ -2157,8 +2067,7 @@
         "/split-views",
         "/tab-bars"
       ],
-      "discoveryHash": "45f00147f73bdcbe98c44ac4df4441c3b66140829f7ec5308bc4d54012f1684b",
-      "lastSeenAt": "2026-03-29T20:16:58.792Z"
+      "discoveryHash": "45f00147f73bdcbe98c44ac4df4441c3b66140829f7ec5308bc4d54012f1684b"
     },
     "https://developer.apple.com/design/human-interface-guidelines/machine-learning": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/machine-learning",
@@ -2174,8 +2083,7 @@
         "/generative-ai",
         "/privacy"
       ],
-      "discoveryHash": "b41fbf9275f0ebc6c5b3fa1253694ecb5e36a45eda78dbe0560a41ac6d90bd3b",
-      "lastSeenAt": "2026-03-29T20:16:04.578Z"
+      "discoveryHash": "b41fbf9275f0ebc6c5b3fa1253694ecb5e36a45eda78dbe0560a41ac6d90bd3b"
     },
     "https://developer.apple.com/design/human-interface-guidelines/managing-accounts": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/managing-accounts",
@@ -2192,8 +2100,7 @@
         "/onboarding",
         "/sign-in-with-apple"
       ],
-      "discoveryHash": "490e0a8647c02c3aa0311309a83f43799064e2beb4ce1d2acdb8302ac8894709",
-      "lastSeenAt": "2026-03-29T20:16:36.702Z"
+      "discoveryHash": "490e0a8647c02c3aa0311309a83f43799064e2beb4ce1d2acdb8302ac8894709"
     },
     "https://developer.apple.com/design/human-interface-guidelines/managing-notifications": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/managing-notifications",
@@ -2209,8 +2116,7 @@
         "/privacy",
         "/settings"
       ],
-      "discoveryHash": "a2feeabbe8fef985fa82eef1dd181a2896b84f8fa9443271bf9f9933a28e9b62",
-      "lastSeenAt": "2026-03-29T20:16:28.042Z"
+      "discoveryHash": "a2feeabbe8fef985fa82eef1dd181a2896b84f8fa9443271bf9f9933a28e9b62"
     },
     "https://developer.apple.com/design/human-interface-guidelines/maps": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/maps",
@@ -2225,8 +2131,7 @@
       "internalLinks": [
         "/sheets"
       ],
-      "discoveryHash": "5b1fa2a5c3a8645d6bb9726bbc0e4fec5b3a852b367adc0ccf6ebd9856373e03",
-      "lastSeenAt": "2026-03-29T20:16:59.917Z"
+      "discoveryHash": "5b1fa2a5c3a8645d6bb9726bbc0e4fec5b3a852b367adc0ccf6ebd9856373e03"
     },
     "https://developer.apple.com/design/human-interface-guidelines/materials": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/materials",
@@ -2249,8 +2154,7 @@
         "/sliders",
         "/toggles"
       ],
-      "discoveryHash": "731dd77ae4e9ffad98d46d34631280a2363ae04ef1e948795330a5ebbe35e6e6",
-      "lastSeenAt": "2026-03-29T20:15:36.483Z"
+      "discoveryHash": "731dd77ae4e9ffad98d46d34631280a2363ae04ef1e948795330a5ebbe35e6e6"
     },
     "https://developer.apple.com/design/human-interface-guidelines/menus": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/menus",
@@ -2276,8 +2180,7 @@
         "/the-menu-bar",
         "/typography"
       ],
-      "discoveryHash": "b72ebd7877241a9138cf0d8a2a02fa9bccd7f2509443aa201c4effc374c5bc29",
-      "lastSeenAt": "2026-03-29T20:16:12.773Z"
+      "discoveryHash": "b72ebd7877241a9138cf0d8a2a02fa9bccd7f2509443aa201c4effc374c5bc29"
     },
     "https://developer.apple.com/design/human-interface-guidelines/menus-and-actions": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/menus-and-actions",
@@ -2302,8 +2205,7 @@
         "/the-menu-bar",
         "/toolbars"
       ],
-      "discoveryHash": "cce463ecff0cd992c5d2bb8242948ef1bbdbfda4315f876ff2a1859c435a512a",
-      "lastSeenAt": "2026-03-29T20:15:51.132Z"
+      "discoveryHash": "cce463ecff0cd992c5d2bb8242948ef1bbdbfda4315f876ff2a1859c435a512a"
     },
     "https://developer.apple.com/design/human-interface-guidelines/modality": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/modality",
@@ -2328,8 +2230,7 @@
         "/popovers",
         "/sheets"
       ],
-      "discoveryHash": "d09a97dcf26177e94e0c8a785613e4f4debe994688e6543377e6ffc61436c0ae",
-      "lastSeenAt": "2026-03-29T20:16:37.360Z"
+      "discoveryHash": "d09a97dcf26177e94e0c8a785613e4f4debe994688e6543377e6ffc61436c0ae"
     },
     "https://developer.apple.com/design/human-interface-guidelines/motion": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/motion",
@@ -2354,8 +2255,7 @@
         "/sf-symbols",
         "/spatial-layout"
       ],
-      "discoveryHash": "1fdf41938ea7f95ad1aaff8ed3b9ba734de445c2495a4895d873845b32fb9fc0",
-      "lastSeenAt": "2026-03-29T20:15:56.921Z"
+      "discoveryHash": "1fdf41938ea7f95ad1aaff8ed3b9ba734de445c2495a4895d873845b32fb9fc0"
     },
     "https://developer.apple.com/design/human-interface-guidelines/multitasking": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/multitasking",
@@ -2378,8 +2278,7 @@
         "/playing-video",
         "/windows"
       ],
-      "discoveryHash": "ecea8270f417079ab8e8390398da6eeac9a61c862d9bea186952142fa86637c4",
-      "lastSeenAt": "2026-03-29T20:15:37.195Z"
+      "discoveryHash": "ecea8270f417079ab8e8390398da6eeac9a61c862d9bea186952142fa86637c4"
     },
     "https://developer.apple.com/design/human-interface-guidelines/navigation-and-search": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/navigation-and-search",
@@ -2397,8 +2296,7 @@
         "/tab-bars",
         "/token-fields"
       ],
-      "discoveryHash": "977b669b404a48926b8c3d7079e8f1a5baedaadd18060017f52ac55b5f7ed3e8",
-      "lastSeenAt": "2026-03-29T20:15:51.726Z"
+      "discoveryHash": "977b669b404a48926b8c3d7079e8f1a5baedaadd18060017f52ac55b5f7ed3e8"
     },
     "https://developer.apple.com/design/human-interface-guidelines/nearby-interactions": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/nearby-interactions",
@@ -2413,8 +2311,7 @@
       "internalLinks": [
         "/feedback"
       ],
-      "discoveryHash": "bb39412b2b71c525f7bfe296be980a70259a0a9a1c6e9f6c22d3b06820f8a37b",
-      "lastSeenAt": "2026-03-29T20:16:19.007Z"
+      "discoveryHash": "bb39412b2b71c525f7bfe296be980a70259a0a9a1c6e9f6c22d3b06820f8a37b"
     },
     "https://developer.apple.com/design/human-interface-guidelines/nfc": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/nfc",
@@ -2427,8 +2324,7 @@
       ],
       "appleChanges": [],
       "internalLinks": [],
-      "discoveryHash": "69fdd276db01f3c464ba24afab621b6936d650c5aaf5a020e2fe8ef01a5884d8",
-      "lastSeenAt": "2026-03-29T20:17:00.561Z"
+      "discoveryHash": "69fdd276db01f3c464ba24afab621b6936d650c5aaf5a020e2fe8ef01a5884d8"
     },
     "https://developer.apple.com/design/human-interface-guidelines/notifications": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/notifications",
@@ -2449,8 +2345,7 @@
         "/managing-notifications",
         "/sf-symbols"
       ],
-      "discoveryHash": "4904eb4e922f6d15a238a9c283864f4aa5d082b3398f53ade4f0c5156d31af68",
-      "lastSeenAt": "2026-03-29T20:17:34.863Z"
+      "discoveryHash": "4904eb4e922f6d15a238a9c283864f4aa5d082b3398f53ade4f0c5156d31af68"
     },
     "https://developer.apple.com/design/human-interface-guidelines/offering-help": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/offering-help",
@@ -2469,8 +2364,7 @@
         "/the-menu-bar",
         "/writing"
       ],
-      "discoveryHash": "45537b262d078da257106b6e95aa432ed83b4ae9ac8aee336e025eca224bdf4a",
-      "lastSeenAt": "2026-03-29T20:16:38.525Z"
+      "discoveryHash": "45537b262d078da257106b6e95aa432ed83b4ae9ac8aee336e025eca224bdf4a"
     },
     "https://developer.apple.com/design/human-interface-guidelines/onboarding": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/onboarding",
@@ -2492,8 +2386,7 @@
         "/offering-help",
         "/privacy"
       ],
-      "discoveryHash": "a5a644acaf268f5866f2588e1bf916cfc6c984f1a53c5515a51bc5c1efdfb687",
-      "lastSeenAt": "2026-03-29T20:16:39.111Z"
+      "discoveryHash": "a5a644acaf268f5866f2588e1bf916cfc6c984f1a53c5515a51bc5c1efdfb687"
     },
     "https://developer.apple.com/design/human-interface-guidelines/ornaments": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/ornaments",
@@ -2512,8 +2405,7 @@
         "/tab-bars",
         "/toolbars"
       ],
-      "discoveryHash": "5912b722ed4837aafe4f4cc434f36b465bc4cfb7ef17475b800e4445826a5b33",
-      "lastSeenAt": "2026-03-29T20:16:21.619Z"
+      "discoveryHash": "5912b722ed4837aafe4f4cc434f36b465bc4cfb7ef17475b800e4445826a5b33"
     },
     "https://developer.apple.com/design/human-interface-guidelines/outline-views": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/outline-views",
@@ -2531,8 +2423,7 @@
         "/search-fields",
         "/split-views"
       ],
-      "discoveryHash": "33ca8d76c5eebdb907f8bfce8ca089b04dd5d630f73fc7349b3326a025d68262",
-      "lastSeenAt": "2026-03-29T20:17:19.775Z"
+      "discoveryHash": "33ca8d76c5eebdb907f8bfce8ca089b04dd5d630f73fc7349b3326a025d68262"
     },
     "https://developer.apple.com/design/human-interface-guidelines/page-controls": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/page-controls",
@@ -2554,8 +2445,7 @@
         "/scroll-views",
         "/sf-symbols"
       ],
-      "discoveryHash": "cfeb597430fc1d0d8609e5d2057dbacbb629448727ab97d778a0b2cd2e9eaae9",
-      "lastSeenAt": "2026-03-29T20:17:26.227Z"
+      "discoveryHash": "cfeb597430fc1d0d8609e5d2057dbacbb629448727ab97d778a0b2cd2e9eaae9"
     },
     "https://developer.apple.com/design/human-interface-guidelines/panels": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/panels",
@@ -2573,8 +2463,7 @@
         "/the-menu-bar",
         "/windows"
       ],
-      "discoveryHash": "1ae76c55eb6c7c03fec15c1273b7c980db1dc016d150aa423527907e94e423d8",
-      "lastSeenAt": "2026-03-29T20:17:06.707Z"
+      "discoveryHash": "1ae76c55eb6c7c03fec15c1273b7c980db1dc016d150aa423527907e94e423d8"
     },
     "https://developer.apple.com/design/human-interface-guidelines/path-controls": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/path-controls",
@@ -2590,8 +2479,7 @@
         "/file-management",
         "/pop-up-buttons"
       ],
-      "discoveryHash": "85a7885734ab3023555a06a8dc19b0ab3d54ba31a5b83009e8a46c73a4d26056",
-      "lastSeenAt": "2026-03-29T20:17:24.415Z"
+      "discoveryHash": "85a7885734ab3023555a06a8dc19b0ab3d54ba31a5b83009e8a46c73a4d26056"
     },
     "https://developer.apple.com/design/human-interface-guidelines/patterns": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/patterns",
@@ -2630,8 +2518,7 @@
         "/undo-and-redo",
         "/workouts"
       ],
-      "discoveryHash": "a7d0941042f605e11cd9c31afdfa7dfcd9335337ef83c5fd12eb9b2dec4d7a98",
-      "lastSeenAt": "2026-03-29T20:15:38.091Z"
+      "discoveryHash": "a7d0941042f605e11cd9c31afdfa7dfcd9335337ef83c5fd12eb9b2dec4d7a98"
     },
     "https://developer.apple.com/design/human-interface-guidelines/photo-editing": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/photo-editing",
@@ -2644,8 +2531,7 @@
       ],
       "appleChanges": [],
       "internalLinks": [],
-      "discoveryHash": "d1e91697b0663369a5e58d4f67a52b7ee979984a8826cd45947b150b16905555",
-      "lastSeenAt": "2026-03-29T20:17:01.197Z"
+      "discoveryHash": "d1e91697b0663369a5e58d4f67a52b7ee979984a8826cd45947b150b16905555"
     },
     "https://developer.apple.com/design/human-interface-guidelines/pickers": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/pickers",
@@ -2665,8 +2551,7 @@
         "/lists-and-tables",
         "/pull-down-buttons"
       ],
-      "discoveryHash": "7acb2084a34b52ad5658d7d8c537105b212c3cdadeef60e2ccc2ac76821d2f72",
-      "lastSeenAt": "2026-03-29T20:17:10.215Z"
+      "discoveryHash": "7acb2084a34b52ad5658d7d8c537105b212c3cdadeef60e2ccc2ac76821d2f72"
     },
     "https://developer.apple.com/design/human-interface-guidelines/playing-audio": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/playing-audio",
@@ -2687,8 +2572,7 @@
         "/feedback",
         "/playing-video"
       ],
-      "discoveryHash": "30aa154138e9db45529c1cfada89864b7a64a8c2230ff07f9ba21215727cd24d",
-      "lastSeenAt": "2026-03-29T20:16:28.651Z"
+      "discoveryHash": "30aa154138e9db45529c1cfada89864b7a64a8c2230ff07f9ba21215727cd24d"
     },
     "https://developer.apple.com/design/human-interface-guidelines/playing-haptics": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/playing-haptics",
@@ -2713,8 +2597,7 @@
         "/sliders",
         "/toggles"
       ],
-      "discoveryHash": "2f6f55042af00c21b77a4337e56d305d65c3641a458e1ff0687dc254104c9eec",
-      "lastSeenAt": "2026-03-29T20:15:43.974Z"
+      "discoveryHash": "2f6f55042af00c21b77a4337e56d305d65c3641a458e1ff0687dc254104c9eec"
     },
     "https://developer.apple.com/design/human-interface-guidelines/playing-video": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/playing-video",
@@ -2735,8 +2618,7 @@
         "/ornaments",
         "/playing-audio"
       ],
-      "discoveryHash": "645add3f1c6f9b5bedddc1678ccec4fd6e3bebb6633a23453f5c2766ae209fd0",
-      "lastSeenAt": "2026-03-29T20:16:29.301Z"
+      "discoveryHash": "645add3f1c6f9b5bedddc1678ccec4fd6e3bebb6633a23453f5c2766ae209fd0"
     },
     "https://developer.apple.com/design/human-interface-guidelines/pointing-devices": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/pointing-devices",
@@ -2756,8 +2638,7 @@
         "/entering-data",
         "/keyboards"
       ],
-      "discoveryHash": "2239d2bb13239eedde1cf95dcf36a210d476ba67d4aff899371cd6b7a345346e",
-      "lastSeenAt": "2026-03-29T20:16:19.690Z"
+      "discoveryHash": "2239d2bb13239eedde1cf95dcf36a210d476ba67d4aff899371cd6b7a345346e"
     },
     "https://developer.apple.com/design/human-interface-guidelines/pop-up-buttons": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/pop-up-buttons",
@@ -2774,8 +2655,7 @@
         "/menus",
         "/pull-down-buttons"
       ],
-      "discoveryHash": "33d4aba571dbfc725a637e4348eeef9b990a4dd7af01eeebbbab0107ed40cbcf",
-      "lastSeenAt": "2026-03-29T20:17:23.898Z"
+      "discoveryHash": "33d4aba571dbfc725a637e4348eeef9b990a4dd7af01eeebbbab0107ed40cbcf"
     },
     "https://developer.apple.com/design/human-interface-guidelines/popovers": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/popovers",
@@ -2793,8 +2673,7 @@
         "/modality",
         "/sheets"
       ],
-      "discoveryHash": "1fb098eaf2f263f65d6a163d8887d888b581e8bda383ebaeb7cd8917496dee1c",
-      "lastSeenAt": "2026-03-29T20:17:07.338Z"
+      "discoveryHash": "1fb098eaf2f263f65d6a163d8887d888b581e8bda383ebaeb7cd8917496dee1c"
     },
     "https://developer.apple.com/design/human-interface-guidelines/presentation": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/presentation",
@@ -2815,8 +2694,7 @@
         "/sheets",
         "/windows"
       ],
-      "discoveryHash": "31faf76d62adda794dce66f7566bf0b8c004e10670c502c3847f9335641c5520",
-      "lastSeenAt": "2026-03-29T20:15:52.582Z"
+      "discoveryHash": "31faf76d62adda794dce66f7566bf0b8c004e10670c502c3847f9335641c5520"
     },
     "https://developer.apple.com/design/human-interface-guidelines/printing": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/printing",
@@ -2833,8 +2711,7 @@
         "/file-management",
         "/the-menu-bar"
       ],
-      "discoveryHash": "f047d2ffa8ba6960f1d28d86f368b679bc1e9c300ebc89c97c5369240cfe57b9",
-      "lastSeenAt": "2026-03-29T20:16:39.710Z"
+      "discoveryHash": "f047d2ffa8ba6960f1d28d86f368b679bc1e9c300ebc89c97c5369240cfe57b9"
     },
     "https://developer.apple.com/design/human-interface-guidelines/privacy": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/privacy",
@@ -2855,8 +2732,7 @@
         "/shareplay",
         "/sign-in-with-apple"
       ],
-      "discoveryHash": "47cc60c443fc62ec32760f9c82a1327a56298e9e1a56a57fccab138e185f2417",
-      "lastSeenAt": "2026-03-29T20:15:57.640Z"
+      "discoveryHash": "47cc60c443fc62ec32760f9c82a1327a56298e9e1a56a57fccab138e185f2417"
     },
     "https://developer.apple.com/design/human-interface-guidelines/progress-indicators": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/progress-indicators",
@@ -2875,8 +2751,7 @@
       "internalLinks": [
         "/alerts"
       ],
-      "discoveryHash": "468d30a2a68ef1f5941e06219d4dd826fb5560cf5ca3fd678611dce13128c0f7",
-      "lastSeenAt": "2026-03-29T20:17:32.283Z"
+      "discoveryHash": "468d30a2a68ef1f5941e06219d4dd826fb5560cf5ca3fd678611dce13128c0f7"
     },
     "https://developer.apple.com/design/human-interface-guidelines/pull-down-buttons": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/pull-down-buttons",
@@ -2897,8 +2772,7 @@
         "/popovers",
         "/sf-symbols"
       ],
-      "discoveryHash": "f3d6f265d5b2bd8f6e8b46a27105cf9f6c5018474af7e3e12ebaaedb8ba3db87",
-      "lastSeenAt": "2026-03-29T20:17:08.471Z"
+      "discoveryHash": "f3d6f265d5b2bd8f6e8b46a27105cf9f6c5018474af7e3e12ebaaedb8ba3db87"
     },
     "https://developer.apple.com/design/human-interface-guidelines/rating-indicators": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/rating-indicators",
@@ -2913,8 +2787,7 @@
       "internalLinks": [
         "/ratings-and-reviews"
       ],
-      "discoveryHash": "2fcbb9621e6bf81004223ba9501baf315f2c269742fabb862dc73d0a8b84ac61",
-      "lastSeenAt": "2026-03-29T20:17:32.861Z"
+      "discoveryHash": "2fcbb9621e6bf81004223ba9501baf315f2c269742fabb862dc73d0a8b84ac61"
     },
     "https://developer.apple.com/design/human-interface-guidelines/ratings-and-reviews": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/ratings-and-reviews",
@@ -2927,8 +2800,7 @@
       ],
       "appleChanges": [],
       "internalLinks": [],
-      "discoveryHash": "e87da6da0b6d5cca4741d8729d12eb5033487655ebe7f7bfc94fd0ac1154c432",
-      "lastSeenAt": "2026-03-29T20:16:40.836Z"
+      "discoveryHash": "e87da6da0b6d5cca4741d8729d12eb5033487655ebe7f7bfc94fd0ac1154c432"
     },
     "https://developer.apple.com/design/human-interface-guidelines/remotes": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/remotes",
@@ -2944,8 +2816,7 @@
         "/focus-and-selection",
         "/live-viewing-apps"
       ],
-      "discoveryHash": "4dc0fa3fa5804fe97da09ba7a7611b4d9a02dc9be88b916ebef0e15f709ef448",
-      "lastSeenAt": "2026-03-29T20:16:20.352Z"
+      "discoveryHash": "4dc0fa3fa5804fe97da09ba7a7611b4d9a02dc9be88b916ebef0e15f709ef448"
     },
     "https://developer.apple.com/design/human-interface-guidelines/researchkit": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/researchkit",
@@ -2962,8 +2833,7 @@
         }
       ],
       "internalLinks": [],
-      "discoveryHash": "2936932bfec40745284180f411a380c899acd50c820888ae717a740eefb588b5",
-      "lastSeenAt": "2026-03-29T20:17:01.871Z"
+      "discoveryHash": "2936932bfec40745284180f411a380c899acd50c820888ae717a740eefb588b5"
     },
     "https://developer.apple.com/design/human-interface-guidelines/right-to-left": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/right-to-left",
@@ -2980,8 +2850,7 @@
         "/layout",
         "/sf-symbols"
       ],
-      "discoveryHash": "69d9efb33519e3c55f23e97ea7bc3b88d727e11b5701bb9d308315e64786289c",
-      "lastSeenAt": "2026-03-29T20:15:58.277Z"
+      "discoveryHash": "69d9efb33519e3c55f23e97ea7bc3b88d727e11b5701bb9d308315e64786289c"
     },
     "https://developer.apple.com/design/human-interface-guidelines/scroll-views": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/scroll-views",
@@ -3005,8 +2874,7 @@
         "/tab-views",
         "/toolbars"
       ],
-      "discoveryHash": "fbe0b42fc758787a3012f4493f07874ae6c3e0403c58465404266c68bd02e0a7",
-      "lastSeenAt": "2026-03-29T20:16:22.179Z"
+      "discoveryHash": "fbe0b42fc758787a3012f4493f07874ae6c3e0403c58465404266c68bd02e0a7"
     },
     "https://developer.apple.com/design/human-interface-guidelines/search-fields": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/search-fields",
@@ -3027,8 +2895,7 @@
         "/segmented-controls",
         "/token-fields"
       ],
-      "discoveryHash": "1d3c05ea9d6dfd0cade37a2f318e03713bad1052c948c2ded3e37b3d051fc2a9",
-      "lastSeenAt": "2026-03-29T20:15:39.232Z"
+      "discoveryHash": "1d3c05ea9d6dfd0cade37a2f318e03713bad1052c948c2ded3e37b3d051fc2a9"
     },
     "https://developer.apple.com/design/human-interface-guidelines/searching": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/searching",
@@ -3050,8 +2917,7 @@
         "/tab-bars",
         "/toolbars"
       ],
-      "discoveryHash": "98104fa1f542f59cf0aac085c19aa07c1e51944ce85da410ac2b0a1c946654ff",
-      "lastSeenAt": "2026-03-29T20:16:41.421Z"
+      "discoveryHash": "98104fa1f542f59cf0aac085c19aa07c1e51944ce85da410ac2b0a1c946654ff"
     },
     "https://developer.apple.com/design/human-interface-guidelines/segmented-controls": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/segmented-controls",
@@ -3074,8 +2940,7 @@
         "/tab-bars",
         "/tab-views"
       ],
-      "discoveryHash": "ddc36b2a361f8d1d2aa114ebd7a4712a1cffe4333f12657149d120ceeeabe112",
-      "lastSeenAt": "2026-03-29T20:16:43.862Z"
+      "discoveryHash": "ddc36b2a361f8d1d2aa114ebd7a4712a1cffe4333f12657149d120ceeeabe112"
     },
     "https://developer.apple.com/design/human-interface-guidelines/selection-and-input": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/selection-and-input",
@@ -3099,8 +2964,7 @@
         "/toggles",
         "/virtual-keyboards"
       ],
-      "discoveryHash": "b71537bfeda4e5b74b2f8f5e91edd3068e7d68ace8878ae38f48fd7db82f4c76",
-      "lastSeenAt": "2026-03-29T20:15:53.161Z"
+      "discoveryHash": "b71537bfeda4e5b74b2f8f5e91edd3068e7d68ace8878ae38f48fd7db82f4c76"
     },
     "https://developer.apple.com/design/human-interface-guidelines/settings": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/settings",
@@ -3116,8 +2980,7 @@
         "/onboarding",
         "/the-menu-bar"
       ],
-      "discoveryHash": "21559d42b51d358f31358b455f0203614a97f51dea16873d9b4f48f0c7b3046d",
-      "lastSeenAt": "2026-03-29T20:16:42.087Z"
+      "discoveryHash": "21559d42b51d358f31358b455f0203614a97f51dea16873d9b4f48f0c7b3046d"
     },
     "https://developer.apple.com/design/human-interface-guidelines/sf-symbols": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/sf-symbols",
@@ -3140,8 +3003,7 @@
         "/typography",
         "/voiceover"
       ],
-      "discoveryHash": "f4784eda6e39a13da9a9bd7730dd2b3f43f020d0c651d959fc8d650fd7520155",
-      "lastSeenAt": "2026-03-29T20:15:59.425Z"
+      "discoveryHash": "f4784eda6e39a13da9a9bd7730dd2b3f43f020d0c651d959fc8d650fd7520155"
     },
     "https://developer.apple.com/design/human-interface-guidelines/shareplay": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/shareplay",
@@ -3162,8 +3024,7 @@
         "/in-app-purchase",
         "/playing-audio"
       ],
-      "discoveryHash": "085bcbe38257f4b40653d1fb93101f5435fe76bb7851dffd62c8763ece7b2079",
-      "lastSeenAt": "2026-03-29T20:17:02.498Z"
+      "discoveryHash": "085bcbe38257f4b40653d1fb93101f5435fe76bb7851dffd62c8763ece7b2079"
     },
     "https://developer.apple.com/design/human-interface-guidelines/shazamkit": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/shazamkit",
@@ -3178,8 +3039,7 @@
       "internalLinks": [
         "/privacy"
       ],
-      "discoveryHash": "48fa210f34a8ee2193f68bdbbf7417c4624657e92916ba90d5836c7e16a8d5a7",
-      "lastSeenAt": "2026-03-29T20:17:03.169Z"
+      "discoveryHash": "48fa210f34a8ee2193f68bdbbf7417c4624657e92916ba90d5836c7e16a8d5a7"
     },
     "https://developer.apple.com/design/human-interface-guidelines/sheets": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/sheets",
@@ -3207,8 +3067,7 @@
         "/spatial-layout",
         "/split-views"
       ],
-      "discoveryHash": "16b313bea52905f3c7cb0a78b38fdfb4f8a69465b927930deca6d2bcf8f2dd1d",
-      "lastSeenAt": "2026-03-29T20:17:26.792Z"
+      "discoveryHash": "16b313bea52905f3c7cb0a78b38fdfb4f8a69465b927930deca6d2bcf8f2dd1d"
     },
     "https://developer.apple.com/design/human-interface-guidelines/sidebars": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/sidebars",
@@ -3233,8 +3092,7 @@
         "/split-views",
         "/tab-bars"
       ],
-      "discoveryHash": "a8724f4591ff8e8dd2f14372080c7f2e8913d37af3fcbc66d8f8deedde6e8069",
-      "lastSeenAt": "2026-03-29T20:15:49.020Z"
+      "discoveryHash": "a8724f4591ff8e8dd2f14372080c7f2e8913d37af3fcbc66d8f8deedde6e8069"
     },
     "https://developer.apple.com/design/human-interface-guidelines/sign-in-with-apple": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/sign-in-with-apple",
@@ -3247,8 +3105,7 @@
       ],
       "appleChanges": [],
       "internalLinks": [],
-      "discoveryHash": "721578b183dd04425c5660a2858fa250e5f8863d9339f9935cb86703325e5267",
-      "lastSeenAt": "2026-03-29T20:17:03.771Z"
+      "discoveryHash": "721578b183dd04425c5660a2858fa250e5f8863d9339f9935cb86703325e5267"
     },
     "https://developer.apple.com/design/human-interface-guidelines/siri": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/siri",
@@ -3266,8 +3123,7 @@
         "/complications",
         "/homekit"
       ],
-      "discoveryHash": "7befe25a86fd5bd6fe976ed3c3a172cae89af9140088236a3f94eab280fbefa9",
-      "lastSeenAt": "2026-03-29T20:15:44.635Z"
+      "discoveryHash": "7befe25a86fd5bd6fe976ed3c3a172cae89af9140088236a3f94eab280fbefa9"
     },
     "https://developer.apple.com/design/human-interface-guidelines/sliders": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/sliders",
@@ -3291,8 +3147,7 @@
         "/steppers",
         "/text-fields"
       ],
-      "discoveryHash": "251e79d70e137cdb460f3d6c14975df53f54d393e2134d72904e88d060c600db",
-      "lastSeenAt": "2026-03-29T20:16:26.371Z"
+      "discoveryHash": "251e79d70e137cdb460f3d6c14975df53f54d393e2134d72904e88d060c600db"
     },
     "https://developer.apple.com/design/human-interface-guidelines/spatial-interactions": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/spatial-interactions",
@@ -3308,8 +3163,7 @@
         "/feedback",
         "/nearby-interactions"
       ],
-      "discoveryHash": "d51583c81c0ddab5463181ed711fcaa5ffc26c92be8045fec2ff91572976f3cb",
-      "lastSeenAt": "2026-03-29T20:17:35.462Z"
+      "discoveryHash": "d51583c81c0ddab5463181ed711fcaa5ffc26c92be8045fec2ff91572976f3cb"
     },
     "https://developer.apple.com/design/human-interface-guidelines/spatial-layout": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/spatial-layout",
@@ -3331,8 +3185,7 @@
         "/layout",
         "/windows"
       ],
-      "discoveryHash": "890fb04cae95486e54a7c8856bf5d9cbb0de9923ecbd37a32dc9c37126eef10a",
-      "lastSeenAt": "2026-03-29T20:16:00.034Z"
+      "discoveryHash": "890fb04cae95486e54a7c8856bf5d9cbb0de9923ecbd37a32dc9c37126eef10a"
     },
     "https://developer.apple.com/design/human-interface-guidelines/split-views": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/split-views",
@@ -3352,8 +3205,7 @@
         "/tab-bars",
         "/tab-views"
       ],
-      "discoveryHash": "5e56586ef0c0edc79e9b471c6c9a379d2df16ed7d39619ae261580b74edda40a",
-      "lastSeenAt": "2026-03-29T20:16:23.125Z"
+      "discoveryHash": "5e56586ef0c0edc79e9b471c6c9a379d2df16ed7d39619ae261580b74edda40a"
     },
     "https://developer.apple.com/design/human-interface-guidelines/status": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/status",
@@ -3370,8 +3222,7 @@
         "/progress-indicators",
         "/rating-indicators"
       ],
-      "discoveryHash": "8cfbaf562b8a1ee5e3ff17b68fd550bad12839f841b0ca35c462840a7104a3eb",
-      "lastSeenAt": "2026-03-29T20:15:53.810Z"
+      "discoveryHash": "8cfbaf562b8a1ee5e3ff17b68fd550bad12839f841b0ca35c462840a7104a3eb"
     },
     "https://developer.apple.com/design/human-interface-guidelines/status-bars": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/status-bars",
@@ -3384,8 +3235,7 @@
       ],
       "appleChanges": [],
       "internalLinks": [],
-      "discoveryHash": "7491a266dba85142de70904637b6af04649ed1516610fa435206ac5d63bf4f9a",
-      "lastSeenAt": "2026-03-29T20:17:07.909Z"
+      "discoveryHash": "7491a266dba85142de70904637b6af04649ed1516610fa435206ac5d63bf4f9a"
     },
     "https://developer.apple.com/design/human-interface-guidelines/steppers": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/steppers",
@@ -3401,8 +3251,7 @@
         "/pickers",
         "/text-fields"
       ],
-      "discoveryHash": "4e4886d1fdbecb8753265651acc87de103dc9c39d19e71d2e193b7543fe33b5f",
-      "lastSeenAt": "2026-03-29T20:17:29.789Z"
+      "discoveryHash": "4e4886d1fdbecb8753265651acc87de103dc9c39d19e71d2e193b7543fe33b5f"
     },
     "https://developer.apple.com/design/human-interface-guidelines/system-experiences": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/system-experiences",
@@ -3424,8 +3273,7 @@
         "/watch-faces",
         "/widgets"
       ],
-      "discoveryHash": "d708f1d988888f7ca04b746e2dcb12e4f03180d9b467bceea3b120e1eec2064e",
-      "lastSeenAt": "2026-03-29T20:15:54.483Z"
+      "discoveryHash": "d708f1d988888f7ca04b746e2dcb12e4f03180d9b467bceea3b120e1eec2064e"
     },
     "https://developer.apple.com/design/human-interface-guidelines/tab-bars": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/tab-bars",
@@ -3452,8 +3300,7 @@
         "/tab-views",
         "/toolbars"
       ],
-      "discoveryHash": "1a2dfa466f9aed616e72c104c72283031c248192966bb01d9e5d52615b52a93c",
-      "lastSeenAt": "2026-03-29T20:16:23.759Z"
+      "discoveryHash": "1a2dfa466f9aed616e72c104c72283031c248192966bb01d9e5d52615b52a93c"
     },
     "https://developer.apple.com/design/human-interface-guidelines/tab-views": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/tab-views",
@@ -3470,8 +3317,7 @@
         "/segmented-controls",
         "/tab-bars"
       ],
-      "discoveryHash": "c9337a6be00c7312664c382c11702aa97fb6046727c54b8b699ca0eec213da4c",
-      "lastSeenAt": "2026-03-29T20:17:20.919Z"
+      "discoveryHash": "c9337a6be00c7312664c382c11702aa97fb6046727c54b8b699ca0eec213da4c"
     },
     "https://developer.apple.com/design/human-interface-guidelines/tap-to-pay-on-iphone": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/tap-to-pay-on-iphone",
@@ -3492,8 +3338,7 @@
         "/progress-indicators",
         "/sf-symbols"
       ],
-      "discoveryHash": "2e91950558c011bf0efd0f7c9dc077231803c478ca19f2291c875a5e005b64da",
-      "lastSeenAt": "2026-03-29T20:17:04.244Z"
+      "discoveryHash": "2e91950558c011bf0efd0f7c9dc077231803c478ca19f2291c875a5e005b64da"
     },
     "https://developer.apple.com/design/human-interface-guidelines/technologies": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/technologies",
@@ -3536,8 +3381,7 @@
         "/voiceover",
         "/wallet"
       ],
-      "discoveryHash": "667447c392bb7c2ee8cbdffc960210f96de1803913417576dded5da4118cdc40",
-      "lastSeenAt": "2026-03-29T20:15:39.819Z"
+      "discoveryHash": "667447c392bb7c2ee8cbdffc960210f96de1803913417576dded5da4118cdc40"
     },
     "https://developer.apple.com/design/human-interface-guidelines/text-fields": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/text-fields",
@@ -3560,8 +3404,7 @@
         "/text-views",
         "/virtual-keyboards"
       ],
-      "discoveryHash": "91b37cc17f0ab2c79964c12020a25636bfce870f9b9332672e6d2f581c826250",
-      "lastSeenAt": "2026-03-29T20:17:30.432Z"
+      "discoveryHash": "91b37cc17f0ab2c79964c12020a25636bfce870f9b9332672e6d2f581c826250"
     },
     "https://developer.apple.com/design/human-interface-guidelines/text-views": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/text-views",
@@ -3585,8 +3428,7 @@
         "/typography",
         "/virtual-keyboards"
       ],
-      "discoveryHash": "a8b764e98fd1dd73b0e1fd01e8a8d855821a442d6428d01d29a0197b057e1874",
-      "lastSeenAt": "2026-03-29T20:17:14.866Z"
+      "discoveryHash": "a8b764e98fd1dd73b0e1fd01e8a8d855821a442d6428d01d29a0197b057e1874"
     },
     "https://developer.apple.com/design/human-interface-guidelines/the-menu-bar": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/the-menu-bar",
@@ -3614,8 +3456,7 @@
         "/tab-bars",
         "/toolbars"
       ],
-      "discoveryHash": "5e78ab483b58f2584019b115560c0a7055307727d8a6a4837546f18e8b0bb6cb",
-      "lastSeenAt": "2026-03-29T20:15:40.356Z"
+      "discoveryHash": "5e78ab483b58f2584019b115560c0a7055307727d8a6a4837546f18e8b0bb6cb"
     },
     "https://developer.apple.com/design/human-interface-guidelines/toggles": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/toggles",
@@ -3635,8 +3476,7 @@
         "/layout",
         "/pop-up-buttons"
       ],
-      "discoveryHash": "7924b0dc629f1340d08445dc4a23c7fc9e45af249d1ebc777338aae00f188a65",
-      "lastSeenAt": "2026-03-29T20:16:27.460Z"
+      "discoveryHash": "7924b0dc629f1340d08445dc4a23c7fc9e45af249d1ebc777338aae00f188a65"
     },
     "https://developer.apple.com/design/human-interface-guidelines/token-fields": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/token-fields",
@@ -3653,8 +3493,7 @@
         "/search-fields",
         "/text-fields"
       ],
-      "discoveryHash": "5aed1251fa6951b441f92965ff05c8db716ebed397b50ab339f97ae7e0957ff9",
-      "lastSeenAt": "2026-03-29T20:16:44.478Z"
+      "discoveryHash": "5aed1251fa6951b441f92965ff05c8db716ebed397b50ab339f97ae7e0957ff9"
     },
     "https://developer.apple.com/design/human-interface-guidelines/toolbars": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/toolbars",
@@ -3685,8 +3524,7 @@
         "/tab-bars",
         "/windows"
       ],
-      "discoveryHash": "8524cc5d880e5e83f8c5ab821d25d610200a19cd450303f1b9b036e73e28e191",
-      "lastSeenAt": "2026-03-29T20:15:41.086Z"
+      "discoveryHash": "8524cc5d880e5e83f8c5ab821d25d610200a19cd450303f1b9b036e73e28e191"
     },
     "https://developer.apple.com/design/human-interface-guidelines/top-shelf": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/top-shelf",
@@ -3702,8 +3540,7 @@
         "/images",
         "/voiceover"
       ],
-      "discoveryHash": "482fee28619f518841b346900c4fd0318c847a7ecb2370b3ab9f673854746685",
-      "lastSeenAt": "2026-03-29T20:17:11.394Z"
+      "discoveryHash": "482fee28619f518841b346900c4fd0318c847a7ecb2370b3ab9f673854746685"
     },
     "https://developer.apple.com/design/human-interface-guidelines/typography": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/typography",
@@ -3724,8 +3561,7 @@
         "/materials",
         "/sf-symbols"
       ],
-      "discoveryHash": "49eb2ed6c5796ddaa1caf18907e4ad34dee1d511b8040020d4aa6c3065be1e2f",
-      "lastSeenAt": "2026-03-29T20:15:45.395Z"
+      "discoveryHash": "49eb2ed6c5796ddaa1caf18907e4ad34dee1d511b8040020d4aa6c3065be1e2f"
     },
     "https://developer.apple.com/design/human-interface-guidelines/undo-and-redo": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/undo-and-redo",
@@ -3743,8 +3579,7 @@
         "/pointing-devices",
         "/the-menu-bar"
       ],
-      "discoveryHash": "41b5326a27d1a97f3b75a41741345cbd2518f7a9830be7fdcda0677aa75e125d",
-      "lastSeenAt": "2026-03-29T20:16:42.720Z"
+      "discoveryHash": "41b5326a27d1a97f3b75a41741345cbd2518f7a9830be7fdcda0677aa75e125d"
     },
     "https://developer.apple.com/design/human-interface-guidelines/virtual-keyboards": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/virtual-keyboards",
@@ -3762,8 +3597,7 @@
         "/keyboards",
         "/layout"
       ],
-      "discoveryHash": "0777b48686d5ee6dab5ce6245afe58cab11fb7520a8e448922b7be0ab54d796d",
-      "lastSeenAt": "2026-03-29T20:17:09.585Z"
+      "discoveryHash": "0777b48686d5ee6dab5ce6245afe58cab11fb7520a8e448922b7be0ab54d796d"
     },
     "https://developer.apple.com/design/human-interface-guidelines/voiceover": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/voiceover",
@@ -3779,8 +3613,7 @@
         "/accessibility",
         "/inclusion"
       ],
-      "discoveryHash": "46af90fe058a801fff603c7ffe9f303d7e911962ca2eba67e329f77afcbffa58",
-      "lastSeenAt": "2026-03-29T20:15:46.181Z"
+      "discoveryHash": "46af90fe058a801fff603c7ffe9f303d7e911962ca2eba67e329f77afcbffa58"
     },
     "https://developer.apple.com/design/human-interface-guidelines/wallet": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/wallet",
@@ -3796,8 +3629,7 @@
         "/apple-pay",
         "/id-verifier"
       ],
-      "discoveryHash": "1a1eaf2a5f038d03266a99918aa5e17923f0ed75d80d109ab475c30c9e11a3c4",
-      "lastSeenAt": "2026-03-29T20:17:04.877Z"
+      "discoveryHash": "1a1eaf2a5f038d03266a99918aa5e17923f0ed75d80d109ab475c30c9e11a3c4"
     },
     "https://developer.apple.com/design/human-interface-guidelines/watch-faces": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/watch-faces",
@@ -3810,8 +3642,7 @@
       ],
       "appleChanges": [],
       "internalLinks": [],
-      "discoveryHash": "183e35ba5c082417e6600892bf7bd14def9b76a7ef074a8f760d68d5899c0b6e",
-      "lastSeenAt": "2026-03-29T20:17:11.991Z"
+      "discoveryHash": "183e35ba5c082417e6600892bf7bd14def9b76a7ef074a8f760d68d5899c0b6e"
     },
     "https://developer.apple.com/design/human-interface-guidelines/web-views": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/web-views",
@@ -3824,8 +3655,7 @@
       ],
       "appleChanges": [],
       "internalLinks": [],
-      "discoveryHash": "7bb1b80fc07c04deee6f1d6370d44d603f60d3018b4e3ad9ad25a9c156cb7e9b",
-      "lastSeenAt": "2026-03-29T20:17:15.672Z"
+      "discoveryHash": "7bb1b80fc07c04deee6f1d6370d44d603f60d3018b4e3ad9ad25a9c156cb7e9b"
     },
     "https://developer.apple.com/design/human-interface-guidelines/widgets": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/widgets",
@@ -3849,8 +3679,7 @@
         "/sf-symbols",
         "/typography"
       ],
-      "discoveryHash": "2302fbb90beadfd0e6f4ce15da431157283e897d77fd782792fd02fa4a69e96d",
-      "lastSeenAt": "2026-03-29T20:17:12.623Z"
+      "discoveryHash": "2302fbb90beadfd0e6f4ce15da431157283e897d77fd782792fd02fa4a69e96d"
     },
     "https://developer.apple.com/design/human-interface-guidelines/windows": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/windows",
@@ -3879,8 +3708,7 @@
         "/the-menu-bar",
         "/toolbars"
       ],
-      "discoveryHash": "96b3d2ab9f9a777ce8865700c68d9c7fca7559c1e7c101f5ef93f63b04c22fd9",
-      "lastSeenAt": "2026-03-29T20:16:25.183Z"
+      "discoveryHash": "96b3d2ab9f9a777ce8865700c68d9c7fca7559c1e7c101f5ef93f63b04c22fd9"
     },
     "https://developer.apple.com/design/human-interface-guidelines/workouts": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/workouts",
@@ -3895,8 +3723,7 @@
       "internalLinks": [
         "/activity-rings"
       ],
-      "discoveryHash": "96615feca71ea78d7d1c5c1d0178eb09c61fdf195d00b8878f9d9623b4aafac2",
-      "lastSeenAt": "2026-03-29T20:16:43.284Z"
+      "discoveryHash": "96615feca71ea78d7d1c5c1d0178eb09c61fdf195d00b8878f9d9623b4aafac2"
     },
     "https://developer.apple.com/design/human-interface-guidelines/writing": {
       "url": "https://developer.apple.com/design/human-interface-guidelines/writing",
@@ -3920,8 +3747,7 @@
         "/text-fields",
         "/voiceover"
       ],
-      "discoveryHash": "2b17244fddeaac0dd2c230e261cf18965115b71037faac05935ec15237f9309e",
-      "lastSeenAt": "2026-03-29T20:16:00.769Z"
+      "discoveryHash": "2b17244fddeaac0dd2c230e261cf18965115b71037faac05935ec15237f9309e"
     }
   }
 }
