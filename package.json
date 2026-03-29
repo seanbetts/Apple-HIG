@@ -8,6 +8,8 @@
     "test": "vitest run",
     "sync": "tsx src/cli.ts sync",
     "discover": "tsx src/cli.ts discover",
+    "plan": "tsx src/cli.ts plan",
+    "render": "tsx src/cli.ts render",
     "verify": "tsx src/cli.ts verify"
   },
   "devDependencies": {

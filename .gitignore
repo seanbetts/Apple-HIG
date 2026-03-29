@@ -3,3 +3,4 @@ node_modules/
 dist/
 coverage/
 output/
+data/manifests/discover.checkpoint.json

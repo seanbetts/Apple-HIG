@@ -48,6 +48,18 @@ Run discovery only:
 npm run discover
 ```
 
+Build a render plan from the latest discovery manifest:
+
+```bash
+npm run plan
+```
+
+Render only the pages selected by the current plan:
+
+```bash
+npm run render
+```
+
 Verify generated output:
 
 ```bash
@@ -63,7 +75,7 @@ npm test
 ## Output Layout
 
 - `content/`: generated Markdown mirror of HIG pages
-- `data/manifests/`: discovery and sync manifests
+- `data/manifests/`: discovery, planning, and render manifests
 - `src/`: CLI, discovery, extraction, normalization, rendering, and IO code
 - `tests/`: unit, fixture, and end-to-end tests
 
