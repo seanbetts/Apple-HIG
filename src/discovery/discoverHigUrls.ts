@@ -71,7 +71,9 @@ export async function discoverHigUrls(
       : browserOrOptions?.onProgress;
   const ownedBrowser = browser ?? (await chromium.launch());
   const page = await ownedBrowser.newPage();
-  const queue = [normalizeHigUrl(rootUrl)];
+  const normalizedRootUrl = normalizeHigUrl(rootUrl);
+  const queue = [normalizedRootUrl];
+  const seen = new Set<string>([normalizedRootUrl]);
   const visited = new Set<string>();
 
   try {
@@ -91,7 +93,8 @@ export async function discoverHigUrls(
       const discoveredUrls = await discoverHigUrlsFromPage(page);
 
       for (const discoveredUrl of discoveredUrls) {
-        if (!visited.has(discoveredUrl)) {
+        if (!seen.has(discoveredUrl)) {
+          seen.add(discoveredUrl);
           queue.push(discoveredUrl);
         }
       }

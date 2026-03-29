@@ -170,4 +170,135 @@ describe("discoverHigUrlsFromPage", () => {
       });
     }
   });
+
+  it("does not enqueue the same canonical URL more than once during recursive discovery", async () => {
+    const server = http.createServer((request, response) => {
+      response.setHeader("Content-Type", "text/html; charset=utf-8");
+
+      if (request.url === "/design/human-interface-guidelines") {
+        response.end(`<!doctype html>
+          <html>
+            <body>
+              <main>
+                <a href="/design/human-interface-guidelines/foundations">Foundations</a>
+                <a href="/design/human-interface-guidelines/components">Components</a>
+              </main>
+            </body>
+          </html>`);
+        return;
+      }
+
+      if (request.url === "/design/human-interface-guidelines/foundations") {
+        response.end(`<!doctype html>
+          <html>
+            <body>
+              <main>
+                <article>
+                  <a href="/design/human-interface-guidelines/inclusion">Inclusion A</a>
+                </article>
+              </main>
+            </body>
+          </html>`);
+        return;
+      }
+
+      if (request.url === "/design/human-interface-guidelines/components") {
+        response.end(`<!doctype html>
+          <html>
+            <body>
+              <main>
+                <article>
+                  <a href="/design/human-interface-guidelines/inclusion/">Inclusion B</a>
+                </article>
+              </main>
+            </body>
+          </html>`);
+        return;
+      }
+
+      if (
+        request.url === "/design/human-interface-guidelines/inclusion" ||
+        request.url === "/design/human-interface-guidelines/inclusion/"
+      ) {
+        response.end(`<!doctype html>
+          <html>
+            <body>
+              <main>
+                <article>
+                  <p>Inclusion</p>
+                </article>
+              </main>
+            </body>
+          </html>`);
+        return;
+      }
+
+      response.end(`<!doctype html><html><body><main></main></body></html>`);
+    });
+
+    await new Promise<void>((resolve) => {
+      server.listen(0, "127.0.0.1", () => resolve());
+    });
+
+    const address = server.address();
+
+    if (!address || typeof address === "string") {
+      throw new Error("Failed to start discovery test server");
+    }
+
+    try {
+      const progressStates: Array<{
+        visitedCount: number;
+        queuedCount: number;
+        discoveredCount: number;
+        currentUrl: string;
+        discoveredUrls: string[];
+      }> = [];
+
+      const urls = await discoverHigUrls(
+        `http://127.0.0.1:${address.port}/design/human-interface-guidelines`,
+        {
+          browser,
+          onProgress: (state) => {
+            progressStates.push(state);
+          }
+        }
+      );
+
+      expect(urls).toEqual([
+        `http://127.0.0.1:${address.port}/design/human-interface-guidelines`,
+        `http://127.0.0.1:${address.port}/design/human-interface-guidelines/components`,
+        `http://127.0.0.1:${address.port}/design/human-interface-guidelines/foundations`,
+        `http://127.0.0.1:${address.port}/design/human-interface-guidelines/inclusion`
+      ]);
+      expect(progressStates[0]).toMatchObject({
+        visitedCount: 1,
+        queuedCount: 2,
+        discoveredCount: 3,
+        currentUrl: `http://127.0.0.1:${address.port}/design/human-interface-guidelines`
+      });
+      expect(
+        progressStates.find(
+          (state) =>
+            state.currentUrl ===
+            `http://127.0.0.1:${address.port}/design/human-interface-guidelines/foundations`
+        )
+      ).toMatchObject({
+        currentUrl: `http://127.0.0.1:${address.port}/design/human-interface-guidelines/foundations`,
+        queuedCount: 1,
+        discoveredCount: 4
+      });
+    } finally {
+      await new Promise<void>((resolve, reject) => {
+        server.close((error) => {
+          if (error) {
+            reject(error);
+            return;
+          }
+
+          resolve();
+        });
+      });
+    }
+  });
 });
