@@ -1,0 +1,33 @@
+{
+  "sourceUrl": "https://developer.apple.com/design/human-interface-guidelines/accessibility",
+  "title": "Accessibility",
+  "description": "Design accessible experiences across Apple platforms.",
+  "breadcrumbs": [
+    "Human Interface Guidelines",
+    "Foundations",
+    "Accessibility"
+  ],
+  "appleChanges": [
+    {
+      "raw": "Updated February 14, 2026"
+    }
+  ],
+  "internalLinks": [
+    "/components/buttons",
+    "/components/buttons"
+  ],
+  "externalLinks": [
+    "https://developer.apple.com/documentation/uikit"
+  ],
+  "contentBlocks": [
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Accessibility"
+    },
+    {
+      "type": "paragraph",
+      "text": "Design accessible experiences across Apple platforms."
+    }
+  ]
+}
