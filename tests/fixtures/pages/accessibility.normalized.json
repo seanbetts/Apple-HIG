@@ -1,0 +1,79 @@
+{
+  "sourceUrl": "https://developer.apple.com/design/human-interface-guidelines/accessibility",
+  "canonicalPath": "/accessibility",
+  "title": "Accessibility",
+  "description": "Design accessible experiences across Apple platforms.",
+  "breadcrumbs": [
+    "Human Interface Guidelines",
+    "Foundations",
+    "Accessibility"
+  ],
+  "section": "Foundations",
+  "appleChanges": [
+    {
+      "label": "Updated",
+      "date": "2026-02-14",
+      "raw": "Updated February 14, 2026"
+    }
+  ],
+  "internalLinks": [
+    "/components/buttons"
+  ],
+  "externalLinks": [
+    "https://developer.apple.com/documentation/uikit"
+  ],
+  "contentBlocks": [
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "Accessibility"
+    },
+    {
+      "type": "paragraph",
+      "text": "Design accessible experiences across Apple platforms."
+    },
+    {
+      "type": "heading",
+      "level": 2,
+      "text": "Overview"
+    },
+    {
+      "type": "paragraph",
+      "text": "Accessible experiences help everyone use your app."
+    },
+    {
+      "type": "list",
+      "ordered": false,
+      "items": [
+        "Support VoiceOver.",
+        "Respect contrast."
+      ]
+    },
+    {
+      "type": "table",
+      "headers": [
+        "Control",
+        "Minimum size"
+      ],
+      "rows": [
+        [
+          "Button",
+          "44 x 44 pt"
+        ]
+      ]
+    },
+    {
+      "type": "related-resources",
+      "links": [
+        {
+          "href": "https://developer.apple.com/design/human-interface-guidelines/components/buttons",
+          "title": "Buttons"
+        },
+        {
+          "href": "https://developer.apple.com/documentation/uikit",
+          "title": "UIKit"
+        }
+      ]
+    }
+  ]
+}
