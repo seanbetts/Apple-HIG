@@ -5,6 +5,7 @@ import { chromium } from "playwright";
 
 import { extractPage } from "../extraction/extractPage.js";
 import { writeManifest } from "../io/writeManifest.js";
+import { logger, type Logger } from "../logging.js";
 import { writePage } from "../io/writePage.js";
 import { normalizePage } from "../normalization/normalizePage.js";
 import { renderMarkdown } from "../render/renderMarkdown.js";
@@ -27,6 +28,7 @@ interface RenderDependencies {
     canonicalPath: string;
   }) => Promise<void>;
   writeManifest: typeof writeManifest;
+  logger?: Logger;
 }
 
 function canonicalPathFromUrl(url: string): string {
@@ -83,7 +85,8 @@ const defaultDependencies: RenderDependencies = {
   renderMarkdown,
   writePage,
   deletePage,
-  writeManifest
+  writeManifest,
+  logger
 };
 
 async function withSharedBrowserExtractor<T>(
@@ -110,9 +113,26 @@ export async function runRender(
   options: RenderOptions,
   dependencies: RenderDependencies = defaultDependencies
 ): Promise<Manifest> {
-  const planManifest = await dependencies.readPlanManifest(options.manifestsRoot);
+  const resolvedDependencies = {
+    ...defaultDependencies,
+    ...dependencies
+  };
+  const renderLogger = resolvedDependencies.logger ?? logger;
+  const planManifest = await resolvedDependencies.readPlanManifest(options.manifestsRoot);
   const processedUrls: string[] = [];
   const failedUrls: string[] = [];
+  const writeProgressManifest = async () => {
+    await resolvedDependencies.writeManifest({
+      manifestsRoot: options.manifestsRoot,
+      fileName: "render.checkpoint.json",
+      manifest: {
+        discoveredUrls: planManifest.discoveredUrls,
+        processedUrls: [...processedUrls],
+        failedUrls: [...failedUrls],
+        removedUrls: []
+      }
+    });
+  };
 
   const processUrls = async (
     extractFromUrl: RenderDependencies["extractPageFromUrl"]
@@ -120,10 +140,10 @@ export async function runRender(
     for (const url of planManifest.renderUrls) {
       try {
         const extractedPage = await extractFromUrl(url);
-        const normalizedPage = dependencies.normalizePage(extractedPage);
-        const markdown = dependencies.renderMarkdown(normalizedPage);
+        const normalizedPage = resolvedDependencies.normalizePage(extractedPage);
+        const markdown = resolvedDependencies.renderMarkdown(normalizedPage);
 
-        await dependencies.writePage({
+        await resolvedDependencies.writePage({
           contentRoot: options.contentRoot,
           canonicalPath: normalizedPage.canonicalPath,
           markdown
@@ -133,17 +153,22 @@ export async function runRender(
       } catch {
         failedUrls.push(url);
       }
+
+      renderLogger.info(
+        `Render progress: processed ${processedUrls.length}/${planManifest.renderUrls.length}, failed ${failedUrls.length}, current ${url}`
+      );
+      await writeProgressManifest();
     }
   };
 
   if (dependencies === defaultDependencies) {
     await withSharedBrowserExtractor(processUrls);
   } else {
-    await processUrls(dependencies.extractPageFromUrl);
+    await processUrls(resolvedDependencies.extractPageFromUrl);
   }
 
   for (const removedUrl of planManifest.removedUrls) {
-    await dependencies.deletePage({
+    await resolvedDependencies.deletePage({
       contentRoot: options.contentRoot,
       canonicalPath: canonicalPathFromUrl(removedUrl)
     });
@@ -156,7 +181,7 @@ export async function runRender(
     removedUrls: planManifest.removedUrls
   };
 
-  await dependencies.writeManifest({
+  await resolvedDependencies.writeManifest({
     manifestsRoot: options.manifestsRoot,
     fileName: "render.json",
     manifest

@@ -311,9 +311,7 @@
     "https://developer.apple.com/design/human-interface-guidelines/search-fields",
     "https://developer.apple.com/design/human-interface-guidelines/searching",
     "https://developer.apple.com/design/human-interface-guidelines/segmented-controls",
-    "https://developer.apple.com/design/human-interface-guidelines/selection-and-input"
-  ],
-  "failedUrls": [
+    "https://developer.apple.com/design/human-interface-guidelines/selection-and-input",
     "https://developer.apple.com/design/human-interface-guidelines/settings",
     "https://developer.apple.com/design/human-interface-guidelines/sf-symbols",
     "https://developer.apple.com/design/human-interface-guidelines/shareplay",
@@ -353,5 +351,6 @@
     "https://developer.apple.com/design/human-interface-guidelines/workouts",
     "https://developer.apple.com/design/human-interface-guidelines/writing"
   ],
+  "failedUrls": [],
   "removedUrls": []
 }

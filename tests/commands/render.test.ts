@@ -21,6 +21,148 @@ afterAll(async () => {
 });
 
 describe("runRender", () => {
+  it("writes checkpoint manifests and emits progress during render", async () => {
+    const rootDir = await makeTempDir();
+    const extractedPage: ExtractedPage = {
+      sourceUrl:
+        "https://developer.apple.com/design/human-interface-guidelines/accessibility",
+      title: "Accessibility",
+      breadcrumbs: ["Human Interface Guidelines", "Accessibility"],
+      appleChanges: [{ raw: "Updated February 14, 2026" }],
+      internalLinks: [],
+      externalLinks: [],
+      contentBlocks: []
+    };
+    const normalizedPage: NormalizedPage = {
+      ...extractedPage,
+      canonicalPath: "/accessibility",
+      appleChanges: [{ label: "Updated", raw: "Updated February 14, 2026" }]
+    };
+    const writeManifest = vi.fn(async (options: { fileName: string }) =>
+      path.join(rootDir, "data", "manifests", options.fileName)
+    );
+    const logger = {
+      info: vi.fn(),
+      warn: vi.fn(),
+      error: vi.fn()
+    };
+
+    const result = await runRender(
+      {
+        contentRoot: path.join(rootDir, "content"),
+        manifestsRoot: path.join(rootDir, "data", "manifests")
+      },
+      {
+        readPlanManifest: async () => ({
+          discoveredUrls: [
+            "https://developer.apple.com/design/human-interface-guidelines/accessibility",
+            "https://developer.apple.com/design/human-interface-guidelines/toolbars"
+          ],
+          newUrls: [],
+          changedUrls: [
+            "https://developer.apple.com/design/human-interface-guidelines/accessibility",
+            "https://developer.apple.com/design/human-interface-guidelines/toolbars"
+          ],
+          unchangedUrls: [],
+          removedUrls: [],
+          renderUrls: [
+            "https://developer.apple.com/design/human-interface-guidelines/accessibility",
+            "https://developer.apple.com/design/human-interface-guidelines/toolbars"
+          ]
+        }),
+        extractPageFromUrl: async (url) => {
+          if (url.endsWith("/toolbars")) {
+            throw new Error("boom");
+          }
+
+          return { ...extractedPage, sourceUrl: url };
+        },
+        normalizePage: (rawPage) => ({
+          ...normalizedPage,
+          sourceUrl: rawPage.sourceUrl
+        }),
+        renderMarkdown: (page) => `# ${page.title}\n`,
+        writePage: async () =>
+          path.join(rootDir, "content", "accessibility", "index.md"),
+        deletePage: async () => undefined,
+        writeManifest,
+        logger
+      }
+    );
+
+    expect(writeManifest).toHaveBeenCalledTimes(3);
+    expect(writeManifest.mock.calls[0]?.[0]).toEqual({
+      manifestsRoot: path.join(rootDir, "data", "manifests"),
+      fileName: "render.checkpoint.json",
+      manifest: {
+        discoveredUrls: [
+          "https://developer.apple.com/design/human-interface-guidelines/accessibility",
+          "https://developer.apple.com/design/human-interface-guidelines/toolbars"
+        ],
+        processedUrls: [
+          "https://developer.apple.com/design/human-interface-guidelines/accessibility"
+        ],
+        failedUrls: [],
+        removedUrls: []
+      }
+    });
+    expect(writeManifest.mock.calls[1]?.[0]).toEqual({
+      manifestsRoot: path.join(rootDir, "data", "manifests"),
+      fileName: "render.checkpoint.json",
+      manifest: {
+        discoveredUrls: [
+          "https://developer.apple.com/design/human-interface-guidelines/accessibility",
+          "https://developer.apple.com/design/human-interface-guidelines/toolbars"
+        ],
+        processedUrls: [
+          "https://developer.apple.com/design/human-interface-guidelines/accessibility"
+        ],
+        failedUrls: [
+          "https://developer.apple.com/design/human-interface-guidelines/toolbars"
+        ],
+        removedUrls: []
+      }
+    });
+    expect(writeManifest.mock.calls[2]?.[0]).toEqual({
+      manifestsRoot: path.join(rootDir, "data", "manifests"),
+      fileName: "render.json",
+      manifest: {
+        discoveredUrls: [
+          "https://developer.apple.com/design/human-interface-guidelines/accessibility",
+          "https://developer.apple.com/design/human-interface-guidelines/toolbars"
+        ],
+        processedUrls: [
+          "https://developer.apple.com/design/human-interface-guidelines/accessibility"
+        ],
+        failedUrls: [
+          "https://developer.apple.com/design/human-interface-guidelines/toolbars"
+        ],
+        removedUrls: []
+      }
+    });
+    expect(logger.info).toHaveBeenNthCalledWith(
+      1,
+      "Render progress: processed 1/2, failed 0, current https://developer.apple.com/design/human-interface-guidelines/accessibility"
+    );
+    expect(logger.info).toHaveBeenNthCalledWith(
+      2,
+      "Render progress: processed 1/2, failed 1, current https://developer.apple.com/design/human-interface-guidelines/toolbars"
+    );
+    expect(result).toEqual({
+      discoveredUrls: [
+        "https://developer.apple.com/design/human-interface-guidelines/accessibility",
+        "https://developer.apple.com/design/human-interface-guidelines/toolbars"
+      ],
+      processedUrls: [
+        "https://developer.apple.com/design/human-interface-guidelines/accessibility"
+      ],
+      failedUrls: [
+        "https://developer.apple.com/design/human-interface-guidelines/toolbars"
+      ],
+      removedUrls: []
+    });
+  });
+
   it("renders the planned URLs and deletes removed pages", async () => {
     const rootDir = await makeTempDir();
     const callOrder: string[] = [];
@@ -94,6 +236,7 @@ describe("runRender", () => {
       "normalize",
       "render",
       "writePage",
+      "writeManifest",
       "delete:/toolbars",
       "writeManifest"
     ]);

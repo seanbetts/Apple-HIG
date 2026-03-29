@@ -5,3 +5,4 @@ coverage/
 output/
 data/manifests/discover.checkpoint.json
 data/manifests/discover.previous.json
+data/manifests/render.checkpoint.json
