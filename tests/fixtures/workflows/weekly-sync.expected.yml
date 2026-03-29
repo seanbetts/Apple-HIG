@@ -1,0 +1,38 @@
+name: Weekly HIG Sync
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 6 * * 1"
+
+jobs:
+  sync:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm install
+
+      - run: npx playwright install chromium
+
+      - run: npm run sync
+
+      - run: npm run verify
+
+      - name: Commit changes if needed
+        run: |
+          if git diff --quiet; then
+            echo "No changes to commit"
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add content data
+          git commit -m "docs: refresh Apple HIG mirror"
+          git push
