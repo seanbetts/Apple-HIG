@@ -17,6 +17,7 @@
     "vitest": "^3.2.4"
   },
   "dependencies": {
+    "gray-matter": "^4.0.3",
     "playwright": "^1.55.0",
     "zod": "^4.1.11"
   }
