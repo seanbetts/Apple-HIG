@@ -1,7 +1,7 @@
 import { discoverHigUrls } from "../discovery/discoverHigUrls.js";
 import { writeManifest } from "../io/writeManifest.js";
 import { logger, type Logger } from "../logging.js";
-import type { Manifest } from "../types/manifest.js";
+import type { DiscoverManifest, DiscoveryPageRecord } from "../types/discovery.js";
 
 interface DiscoverOptions {
   rootUrl: string;
@@ -19,6 +19,7 @@ interface DiscoverDependencies {
         currentUrl: string;
         discoveredUrls: string[];
       }) => Promise<void> | void;
+      onPageDiscovered?: (page: DiscoveryPageRecord) => Promise<void> | void;
     }
   ) => Promise<string[]>;
   writeManifest: typeof writeManifest;
@@ -34,8 +35,19 @@ const defaultDependencies: DiscoverDependencies = {
 export async function runDiscover(
   options: DiscoverOptions,
   dependencies: DiscoverDependencies = defaultDependencies
-): Promise<Manifest> {
+): Promise<DiscoverManifest> {
+  const pagesByUrl: Record<string, DiscoveryPageRecord> = {};
+  const sortPagesByUrl = (urls: string[]) =>
+    Object.fromEntries(
+      urls
+        .filter((url) => url in pagesByUrl)
+        .sort()
+        .map((url) => [url, pagesByUrl[url]])
+    );
   const discoveredUrls = await dependencies.discoverHigUrls(options.rootUrl, {
+    onPageDiscovered: async (page) => {
+      pagesByUrl[page.url] = page;
+    },
     onProgress: async (state) => {
       dependencies.logger.info(
         `Discovery progress: visited ${state.visitedCount}, queued ${state.queuedCount}, discovered ${state.discoveredCount}, current ${state.currentUrl}`
@@ -48,16 +60,18 @@ export async function runDiscover(
           discoveredUrls: state.discoveredUrls,
           processedUrls: [],
           failedUrls: [],
-          removedUrls: []
+          removedUrls: [],
+          pages: sortPagesByUrl(state.discoveredUrls)
         }
       });
     }
   });
-  const manifest: Manifest = {
+  const manifest: DiscoverManifest = {
     discoveredUrls,
     processedUrls: [],
     failedUrls: [],
-    removedUrls: []
+    removedUrls: [],
+    pages: sortPagesByUrl(discoveredUrls)
   };
 
   await dependencies.writeManifest({

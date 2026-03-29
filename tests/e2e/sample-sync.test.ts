@@ -4,7 +4,7 @@ import path from "node:path";
 
 import { afterAll, describe, expect, it } from "vitest";
 
-import type { Manifest } from "../../src/types/manifest.js";
+import type { DiscoverManifest } from "../../src/types/discovery.js";
 import type { PlanManifest } from "../../src/types/plan.js";
 import { runRender } from "../../src/commands/render.js";
 import { runSync } from "../../src/commands/sync.js";
@@ -89,8 +89,9 @@ describe("sample HIG sync", () => {
           discoveredUrls: Array.from(pages.keys()),
           processedUrls: [],
           failedUrls: [],
-          removedUrls: []
-        }) satisfies Manifest,
+          removedUrls: [],
+          pages: {}
+        }) satisfies DiscoverManifest,
       runPlan: async () =>
         ({
           discoveredUrls: Array.from(pages.keys()),

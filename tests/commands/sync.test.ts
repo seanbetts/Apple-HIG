@@ -42,7 +42,8 @@ describe("runSync", () => {
             ],
             processedUrls: [],
             failedUrls: [],
-            removedUrls: []
+            removedUrls: [],
+            pages: {}
           };
         },
         runPlan: async () => {
@@ -112,7 +113,8 @@ describe("runSync", () => {
           ],
           processedUrls: [],
           failedUrls: [],
-          removedUrls: []
+          removedUrls: [],
+          pages: {}
         }),
         runPlan: async () => ({
           discoveredUrls: [

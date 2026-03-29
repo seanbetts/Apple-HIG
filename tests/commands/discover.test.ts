@@ -5,7 +5,7 @@ import fs from "node:fs/promises";
 import { afterAll, describe, expect, it, vi } from "vitest";
 
 import { runDiscover } from "../../src/commands/discover.js";
-import type { Manifest } from "../../src/types/manifest.js";
+import type { DiscoverManifest, DiscoveryPageRecord } from "../../src/types/discovery.js";
 
 const tempDirs: string[] = [];
 
@@ -32,6 +32,27 @@ describe("runDiscover", () => {
       error: vi.fn()
     };
 
+    const accessibilityPage = {
+      url: "https://developer.apple.com/design/human-interface-guidelines/accessibility",
+      canonicalPath: "/accessibility",
+      title: "Accessibility",
+      breadcrumbs: ["Human Interface Guidelines", "Accessibility"],
+      appleChanges: [{ raw: "Updated February 14, 2026" }],
+      internalLinks: ["/components/buttons"],
+      discoveryHash: "hash-accessibility",
+      lastSeenAt: "2026-03-29T20:00:00.000Z"
+    } satisfies DiscoveryPageRecord;
+    const buttonsPage = {
+      url: "https://developer.apple.com/design/human-interface-guidelines/components/buttons",
+      canonicalPath: "/components/buttons",
+      title: "Buttons",
+      breadcrumbs: ["Human Interface Guidelines", "Components", "Buttons"],
+      appleChanges: [],
+      internalLinks: [],
+      discoveryHash: "hash-buttons",
+      lastSeenAt: "2026-03-29T20:00:01.000Z"
+    } satisfies DiscoveryPageRecord;
+
     const result = await runDiscover(
       {
         rootUrl: "https://developer.apple.com/design/human-interface-guidelines/",
@@ -46,7 +67,9 @@ describe("runDiscover", () => {
             currentUrl: string;
             discoveredUrls: string[];
           }) => Promise<void> | void;
+          onPageDiscovered?: (page: DiscoveryPageRecord) => Promise<void> | void;
         }) => {
+          await options?.onPageDiscovered?.(accessibilityPage);
           await options?.onProgress?.({
             visitedCount: 1,
             queuedCount: 2,
@@ -59,6 +82,7 @@ describe("runDiscover", () => {
               "https://developer.apple.com/design/human-interface-guidelines/foundations"
             ]
           });
+          await options?.onPageDiscovered?.(buttonsPage);
 
           return [
             "https://developer.apple.com/design/human-interface-guidelines/accessibility",
@@ -76,7 +100,7 @@ describe("runDiscover", () => {
         {
           manifestsRoot: string;
           fileName: string;
-          manifest: Manifest;
+          manifest: DiscoverManifest;
         }
       ]
     >;
@@ -92,8 +116,12 @@ describe("runDiscover", () => {
         ],
         processedUrls: [],
         failedUrls: [],
-        removedUrls: []
-      } satisfies Manifest
+        removedUrls: [],
+        pages: {
+          "https://developer.apple.com/design/human-interface-guidelines/accessibility":
+            accessibilityPage
+        }
+      } satisfies DiscoverManifest
     });
     expect(manifestCalls[1]?.[0]).toEqual({
       manifestsRoot: path.join(rootDir, "data", "manifests"),
@@ -105,8 +133,14 @@ describe("runDiscover", () => {
         ],
         processedUrls: [],
         failedUrls: [],
-        removedUrls: []
-      } satisfies Manifest
+        removedUrls: [],
+        pages: {
+          "https://developer.apple.com/design/human-interface-guidelines/accessibility":
+            accessibilityPage,
+          "https://developer.apple.com/design/human-interface-guidelines/components/buttons":
+            buttonsPage
+        }
+      } satisfies DiscoverManifest
     });
     expect(logger.info).toHaveBeenCalledWith(
       "Discovery progress: visited 1, queued 2, discovered 3, current https://developer.apple.com/design/human-interface-guidelines/accessibility"
@@ -115,6 +149,12 @@ describe("runDiscover", () => {
       "https://developer.apple.com/design/human-interface-guidelines/accessibility",
       "https://developer.apple.com/design/human-interface-guidelines/components/buttons"
     ]);
+    expect(result.pages).toEqual({
+      "https://developer.apple.com/design/human-interface-guidelines/accessibility":
+        accessibilityPage,
+      "https://developer.apple.com/design/human-interface-guidelines/components/buttons":
+        buttonsPage
+    });
     expect(onProgress).not.toHaveBeenCalled();
   });
 });

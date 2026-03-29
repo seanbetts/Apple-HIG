@@ -1,6 +1,8 @@
 import { chromium, type Browser, type Page } from "playwright";
 
+import { extractDiscoveryPage } from "./extractDiscoveryPage.js";
 import { classifyAppleUrl, normalizeHigUrl } from "./urlRules.js";
+import type { DiscoveryPageRecord } from "../types/discovery.js";
 
 export interface DiscoveryProgress {
   visitedCount: number;
@@ -8,6 +10,12 @@ export interface DiscoveryProgress {
   discoveredCount: number;
   currentUrl: string;
   discoveredUrls: string[];
+}
+
+export interface DiscoveryOptions {
+  browser?: Browser;
+  onProgress?: (state: DiscoveryProgress) => Promise<void> | void;
+  onPageDiscovered?: (page: DiscoveryPageRecord) => Promise<void> | void;
 }
 
 async function waitForHydratedContent(page: Page): Promise<void> {
@@ -58,8 +66,8 @@ export async function discoverHigUrlsFromPage(page: Page): Promise<string[]> {
 
 export async function discoverHigUrls(
   rootUrl: string,
-  browserOrOptions?: Browser | { browser?: Browser; onProgress?: (state: DiscoveryProgress) => Promise<void> | void },
-  maybeOptions?: { onProgress?: (state: DiscoveryProgress) => Promise<void> | void }
+  browserOrOptions?: Browser | DiscoveryOptions,
+  maybeOptions?: DiscoveryOptions
 ): Promise<string[]> {
   const browser =
     browserOrOptions && "newPage" in browserOrOptions
@@ -69,6 +77,10 @@ export async function discoverHigUrls(
     browserOrOptions && "newPage" in browserOrOptions
       ? maybeOptions?.onProgress
       : browserOrOptions?.onProgress;
+  const onPageDiscovered =
+    browserOrOptions && "newPage" in browserOrOptions
+      ? maybeOptions?.onPageDiscovered
+      : browserOrOptions?.onPageDiscovered;
   const ownedBrowser = browser ?? (await chromium.launch());
   const page = await ownedBrowser.newPage();
   const normalizedRootUrl = normalizeHigUrl(rootUrl);
@@ -91,6 +103,9 @@ export async function discoverHigUrls(
       });
 
       const discoveredUrls = await discoverHigUrlsFromPage(page);
+      const discoveredPage = await extractDiscoveryPage(page, currentUrl);
+
+      await onPageDiscovered?.(discoveredPage);
 
       for (const discoveredUrl of discoveredUrls) {
         if (!seen.has(discoveredUrl)) {

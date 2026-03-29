@@ -5,6 +5,7 @@ import fs from "node:fs/promises";
 import { afterAll, describe, expect, it, vi } from "vitest";
 
 import { runPlan } from "../../src/commands/plan.js";
+import type { DiscoverManifest } from "../../src/types/discovery.js";
 
 const tempDirs: string[] = [];
 
@@ -30,24 +31,92 @@ describe("runPlan", () => {
         manifestsRoot: path.join(rootDir, "data", "manifests")
       },
       {
-        readCurrentDiscoverManifest: async () => ({
+        readCurrentDiscoverManifest: async () =>
+          ({
           discoveredUrls: [
             "https://developer.apple.com/design/human-interface-guidelines/accessibility",
-            "https://developer.apple.com/design/human-interface-guidelines/components/buttons"
+            "https://developer.apple.com/design/human-interface-guidelines/components/buttons",
+            "https://developer.apple.com/design/human-interface-guidelines/patterns"
           ],
           processedUrls: [],
           failedUrls: [],
-          removedUrls: []
-        }),
-        readPreviousDiscoverManifest: async () => ({
+          removedUrls: [],
+          pages: {
+            "https://developer.apple.com/design/human-interface-guidelines/accessibility": {
+              url: "https://developer.apple.com/design/human-interface-guidelines/accessibility",
+              canonicalPath: "/accessibility",
+              title: "Accessibility",
+              breadcrumbs: ["Human Interface Guidelines", "Accessibility"],
+              appleChanges: [{ raw: "Updated February 14, 2026" }],
+              internalLinks: [],
+              discoveryHash: "same-hash",
+              lastSeenAt: "2026-03-29T20:00:00.000Z"
+            },
+            "https://developer.apple.com/design/human-interface-guidelines/components/buttons": {
+              url: "https://developer.apple.com/design/human-interface-guidelines/components/buttons",
+              canonicalPath: "/components/buttons",
+              title: "Buttons",
+              breadcrumbs: ["Human Interface Guidelines", "Components", "Buttons"],
+              appleChanges: [],
+              internalLinks: [],
+              discoveryHash: "new-hash",
+              lastSeenAt: "2026-03-29T20:00:00.000Z"
+            },
+            "https://developer.apple.com/design/human-interface-guidelines/patterns": {
+              url: "https://developer.apple.com/design/human-interface-guidelines/patterns",
+              canonicalPath: "/patterns",
+              title: "Patterns",
+              breadcrumbs: ["Human Interface Guidelines", "Patterns"],
+              appleChanges: [],
+              internalLinks: [],
+              discoveryHash: "changed-hash-next",
+              lastSeenAt: "2026-03-29T20:00:00.000Z"
+            }
+          }
+        }) satisfies DiscoverManifest,
+        readPreviousDiscoverManifest: async () =>
+          ({
           discoveredUrls: [
             "https://developer.apple.com/design/human-interface-guidelines/accessibility",
+            "https://developer.apple.com/design/human-interface-guidelines/patterns",
             "https://developer.apple.com/design/human-interface-guidelines/toolbars"
           ],
           processedUrls: [],
           failedUrls: [],
-          removedUrls: []
-        }),
+          removedUrls: [],
+          pages: {
+            "https://developer.apple.com/design/human-interface-guidelines/accessibility": {
+              url: "https://developer.apple.com/design/human-interface-guidelines/accessibility",
+              canonicalPath: "/accessibility",
+              title: "Accessibility",
+              breadcrumbs: ["Human Interface Guidelines", "Accessibility"],
+              appleChanges: [{ raw: "Updated February 14, 2026" }],
+              internalLinks: [],
+              discoveryHash: "same-hash",
+              lastSeenAt: "2026-03-22T20:00:00.000Z"
+            },
+            "https://developer.apple.com/design/human-interface-guidelines/patterns": {
+              url: "https://developer.apple.com/design/human-interface-guidelines/patterns",
+              canonicalPath: "/patterns",
+              title: "Patterns",
+              breadcrumbs: ["Human Interface Guidelines", "Patterns"],
+              appleChanges: [],
+              internalLinks: [],
+              discoveryHash: "changed-hash-prev",
+              lastSeenAt: "2026-03-22T20:00:00.000Z"
+            },
+            "https://developer.apple.com/design/human-interface-guidelines/toolbars": {
+              url: "https://developer.apple.com/design/human-interface-guidelines/toolbars",
+              canonicalPath: "/toolbars",
+              title: "Toolbars",
+              breadcrumbs: ["Human Interface Guidelines", "Components", "Toolbars"],
+              appleChanges: [],
+              internalLinks: [],
+              discoveryHash: "removed-hash",
+              lastSeenAt: "2026-03-22T20:00:00.000Z"
+            }
+          }
+        }) satisfies DiscoverManifest,
         writePlanManifest
       }
     );
@@ -58,27 +127,33 @@ describe("runPlan", () => {
       manifest: {
         discoveredUrls: [
           "https://developer.apple.com/design/human-interface-guidelines/accessibility",
-          "https://developer.apple.com/design/human-interface-guidelines/components/buttons"
+          "https://developer.apple.com/design/human-interface-guidelines/components/buttons",
+          "https://developer.apple.com/design/human-interface-guidelines/patterns"
         ],
         newUrls: [
           "https://developer.apple.com/design/human-interface-guidelines/components/buttons"
         ],
         changedUrls: [
+          "https://developer.apple.com/design/human-interface-guidelines/patterns"
+        ],
+        unchangedUrls: [
           "https://developer.apple.com/design/human-interface-guidelines/accessibility"
         ],
-        unchangedUrls: [],
         removedUrls: [
           "https://developer.apple.com/design/human-interface-guidelines/toolbars"
         ],
         renderUrls: [
-          "https://developer.apple.com/design/human-interface-guidelines/accessibility",
-          "https://developer.apple.com/design/human-interface-guidelines/components/buttons"
+          "https://developer.apple.com/design/human-interface-guidelines/components/buttons",
+          "https://developer.apple.com/design/human-interface-guidelines/patterns"
         ]
       }
     });
     expect(result.renderUrls).toEqual([
-      "https://developer.apple.com/design/human-interface-guidelines/accessibility",
-      "https://developer.apple.com/design/human-interface-guidelines/components/buttons"
+      "https://developer.apple.com/design/human-interface-guidelines/components/buttons",
+      "https://developer.apple.com/design/human-interface-guidelines/patterns"
+    ]);
+    expect(result.unchangedUrls).toEqual([
+      "https://developer.apple.com/design/human-interface-guidelines/accessibility"
     ]);
   });
 });

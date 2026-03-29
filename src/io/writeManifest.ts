@@ -1,12 +1,10 @@
 import fs from "node:fs/promises";
 import path from "node:path";
 
-import type { Manifest } from "../types/manifest.js";
-
-export async function writeManifest(options: {
+export async function writeManifest<T>(options: {
   manifestsRoot: string;
   fileName: string;
-  manifest: Manifest;
+  manifest: T;
 }): Promise<string> {
   const outputPath = path.join(options.manifestsRoot, options.fileName);
 

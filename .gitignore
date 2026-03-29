@@ -4,3 +4,4 @@ dist/
 coverage/
 output/
 data/manifests/discover.checkpoint.json
+data/manifests/discover.previous.json

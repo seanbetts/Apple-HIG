@@ -1,7 +1,8 @@
 import fs from "node:fs/promises";
 import path from "node:path";
 
-import type { Manifest } from "../types/manifest.js";
+import { discoverManifestSchema, type DiscoverManifest } from "../types/discovery.js";
+import { manifestSchema } from "../types/manifest.js";
 import { planManifestSchema, type PlanManifest } from "../types/plan.js";
 
 interface PlanOptions {
@@ -9,8 +10,8 @@ interface PlanOptions {
 }
 
 interface PlanDependencies {
-  readCurrentDiscoverManifest: (manifestsRoot: string) => Promise<Manifest>;
-  readPreviousDiscoverManifest: (manifestsRoot: string) => Promise<Manifest | null>;
+  readCurrentDiscoverManifest: (manifestsRoot: string) => Promise<DiscoverManifest>;
+  readPreviousDiscoverManifest: (manifestsRoot: string) => Promise<DiscoverManifest | null>;
   writePlanManifest: (options: {
     manifestsRoot: string;
     fileName: string;
@@ -18,17 +19,29 @@ interface PlanDependencies {
   }) => Promise<string>;
 }
 
-async function readManifestFile(filePath: string): Promise<Manifest> {
-  return JSON.parse(await fs.readFile(filePath, "utf8")) as Manifest;
+async function readManifestFile(filePath: string): Promise<DiscoverManifest> {
+  const rawManifest = JSON.parse(await fs.readFile(filePath, "utf8")) as unknown;
+  const parsedDiscoverManifest = discoverManifestSchema.safeParse(rawManifest);
+
+  if (parsedDiscoverManifest.success) {
+    return parsedDiscoverManifest.data;
+  }
+
+  const parsedLegacyManifest = manifestSchema.parse(rawManifest);
+
+  return {
+    ...parsedLegacyManifest,
+    pages: {}
+  };
 }
 
-async function readCurrentDiscoverManifest(manifestsRoot: string): Promise<Manifest> {
+async function readCurrentDiscoverManifest(manifestsRoot: string): Promise<DiscoverManifest> {
   return readManifestFile(path.join(manifestsRoot, "discover.json"));
 }
 
 async function readPreviousDiscoverManifest(
   manifestsRoot: string
-): Promise<Manifest | null> {
+): Promise<DiscoverManifest | null> {
   try {
     return await readManifestFile(path.join(manifestsRoot, "discover.previous.json"));
   } catch (error) {
@@ -77,15 +90,29 @@ export async function runPlan(
       discoveredUrls: [],
       processedUrls: [],
       failedUrls: [],
-      removedUrls: []
+      removedUrls: [],
+      pages: {}
     };
 
   const currentUrls = new Set(currentManifest.discoveredUrls);
   const previousUrls = new Set(previousManifest.discoveredUrls);
+  const getDiscoveryHash = (manifest: DiscoverManifest, url: string) =>
+    manifest.pages[url]?.discoveryHash;
 
   const newUrls = currentManifest.discoveredUrls.filter((url) => !previousUrls.has(url));
-  const changedUrls = currentManifest.discoveredUrls.filter((url) => previousUrls.has(url));
-  const unchangedUrls: string[] = [];
+  const changedUrls = currentManifest.discoveredUrls.filter(
+    (url) =>
+      previousUrls.has(url) &&
+      (getDiscoveryHash(currentManifest, url) == null ||
+        getDiscoveryHash(previousManifest, url) == null ||
+        getDiscoveryHash(currentManifest, url) !== getDiscoveryHash(previousManifest, url))
+  );
+  const unchangedUrls = currentManifest.discoveredUrls.filter(
+    (url) =>
+      previousUrls.has(url) &&
+      getDiscoveryHash(currentManifest, url) != null &&
+      getDiscoveryHash(currentManifest, url) === getDiscoveryHash(previousManifest, url)
+  );
   const removedUrls = previousManifest.discoveredUrls.filter((url) => !currentUrls.has(url));
   const renderUrls = [...newUrls, ...changedUrls].sort();
 
