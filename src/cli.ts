@@ -1,15 +1,39 @@
+import { runDiscover } from "./commands/discover.js";
+import { runSync } from "./commands/sync.js";
+import { verifyGeneratedContent } from "./commands/verify.js";
+import { resolveRepoPath } from "./config.js";
 import { logger } from "./logging.js";
 
 export type CommandHandler = () => Promise<void>;
 
-async function unimplementedCommand(): Promise<void> {
-  logger.info("Command not implemented yet.");
-}
-
 export const commands: Record<string, CommandHandler> = {
-  discover: unimplementedCommand,
-  sync: unimplementedCommand,
-  verify: unimplementedCommand
+  discover: async () => {
+    await runDiscover({
+      rootUrl: "https://developer.apple.com/design/human-interface-guidelines/",
+      manifestsRoot: resolveRepoPath("data", "manifests")
+    });
+    logger.info("Discovery manifest written.");
+  },
+  sync: async () => {
+    await runSync({
+      rootUrl: "https://developer.apple.com/design/human-interface-guidelines/",
+      contentRoot: resolveRepoPath("content"),
+      manifestsRoot: resolveRepoPath("data", "manifests")
+    });
+    logger.info("Sync manifest written.");
+  },
+  verify: async () => {
+    const result = await verifyGeneratedContent({
+      contentRoot: resolveRepoPath("content")
+    });
+
+    if (!result.ok) {
+      result.errors.forEach((error) => logger.error(error));
+      throw new Error("Generated content verification failed.");
+    }
+
+    logger.info("Generated content verified.");
+  }
 };
 
 export async function run(argv: string[]): Promise<number> {
@@ -20,8 +44,13 @@ export async function run(argv: string[]): Promise<number> {
     return 1;
   }
 
-  await commands[commandName]();
-  return 0;
+  try {
+    await commands[commandName]();
+    return 0;
+  } catch (error) {
+    logger.error(error instanceof Error ? error.message : String(error));
+    return 1;
+  }
 }
 
 if (import.meta.url === `file://${process.argv[1]}`) {
